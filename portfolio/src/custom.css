@@ -1,0 +1,66 @@
+/* Provide sufficient contrast against white background */
+body {
+    background-color: #F8F8F6;
+}
+
+body::-webkit-scrollbar {
+    
+}
+
+.navbar-brand{
+    margin-left:50%;
+    transform: translate(-50%,0%);
+}
+
+a {
+    color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.full_width {
+    padding-left: 0vw;
+    padding-right: 0vw;
+    max-width: none;
+}
+
+#main_header {
+    position: absolute;
+    width: 100%;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    background-color: #000a2b;
+    z-index: 1;
+}
+
+#interactive_canvas{
+    position:fixed;
+    height:100%;
+    width:100%;
+    top:0px;
+    left:0px;
+    background-color:#09090c;
+    z-index:-1;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scroll-with-no-scrollbar {
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scroll-with-no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.text-dark {
+    color: #436056 !important;
+}
