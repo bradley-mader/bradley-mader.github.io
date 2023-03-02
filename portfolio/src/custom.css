@@ -7,11 +7,6 @@ body::-webkit-scrollbar {
     
 }
 
-.navbar-brand{
-    margin-left:50%;
-    transform: translate(-50%,0%);
-}
-
 a {
     color: #0366d6;
 }
