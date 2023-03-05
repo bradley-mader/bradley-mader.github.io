@@ -9,17 +9,31 @@ const ResumeContainer = styled.div`
       position: relative;
       border: solid 2px #bbbbbb;
       background-color: #eeeeee;
-      margin: 1em;
-      padding: 1em;
-      border-radius: 5px;
+      margin-left: 50%;
+      border-radius: 5px 5px 0px 0px;
+      width:8.5in;
+      transform:translate(-50%, 0%);
+      @media print{
+        position:fixed;
+        border:none;
+        background-color:#FFF
+        margin:.5in;
+        width:7.5in;
+        padding:none;
+        border-radius:none;
+      }
     `;
 
 const PrintHeader = styled.div`
       height:2.5em;
+      @media print{
+        display:none;
+      }
     `;
 const PrintIcon = styled.img`
         float:right;
         width:25px;
+        margin:.5em;
         cursor:pointer;
     `;
 
@@ -43,9 +57,6 @@ export class Resume extends Component {
   render() {
     return (
         <div>
-            <h1>
-                Resume
-            </h1>
             <ResumeContainer>
                 <PrintHeader>
                   <PrintIcon src="print.png" onClick={this.print}/>
@@ -62,11 +73,11 @@ export class Resume extends Component {
                         </p>
                       </div>
                       <div id="Resume_ContactInfo">
-                        <p><label className='Resume_ContactLabel'>Website:</label> bradley-mader.github.io</p>
-                        <p><label className='Resume_ContactLabel'>LinkedIn:</label> linkedin.com/in/bradley-mader</p>
-                        <p><label className='Resume_ContactLabel'>Itch Page:</label> bmader23.itch.io</p>
-                        <p><label className='Resume_ContactLabel'>Email:</label> mader.bradley@gmail.com</p>
-                        <p><label className='Resume_ContactLabel'>Twitter:</label> @BMMader</p>
+                        <p><label className='Resume_ContactLabel'>W:</label> bradley-mader.github.io</p>
+                        <p><label className='Resume_ContactLabel'>L:</label> linkedin.com/in/bradley-mader</p>
+                        <p><label className='Resume_ContactLabel'>I:</label> bmader23.itch.io</p>
+                        <p><label className='Resume_ContactLabel'>E:</label> mader.bradley@gmail.com</p>
+                        <p><label className='Resume_ContactLabel'>T:</label> @BMMader</p>
                       </div>
                     </div>
                     <h4 className='full_break'>Work Experience</h4>
@@ -86,8 +97,7 @@ export class Resume extends Component {
                         <div className='work_daterange'>October 2018 - July 2022</div>
                       </div>
                       <ul>
-                        <li>Developed Customer Relationship Management application used by all customer facing employees of the 
-                        third largest Credit Union in the United States.</li>
+                        <li>Developed Customer Relationship Management application used by over 2,000 employees.</li>
                         <li>Implemented Backend .NET Core Microservices with an n-tier architecture.</li>
                         <li>Prototyped and implemented Azure Patterns which were later adopted across the organization including API 
                           Manager, Functions and Container Instances hosting Docker images.</li>
@@ -104,10 +114,8 @@ export class Resume extends Component {
                           Generated staff and customer volume forecasting models which drove actual headcount within 1% of budget across 
                           5 geographic regions.
                         </li><li> 
-                        Engineered pilot scheduling platform to feed information from forecasting models back to 
-                        individual managers. 
-                        </li><li>
-                        Created Quality Assurance platform which drove the first decentralized quality initiative.
+                          Engineered pilot scheduling platform to feed information from forecasting models back to 
+                          individual managers. 
                         </li>
                       </ul>
                     </div>

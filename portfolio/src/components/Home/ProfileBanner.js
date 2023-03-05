@@ -13,7 +13,7 @@ const ProfileContainer = styled.div`
 `
 const ProfileImage = styled.img`
     border-radius:50%;
-    margin-top:25vh;
+    margin-top:20vh;
 `
 
 export class ProfileBanner extends Component {

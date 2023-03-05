@@ -8,7 +8,7 @@ export class Layout extends Component {
   render () {
     return (
       <div>
-        <NavMenu/>
+        <NavMenu className="not_printable"/>
         <Container className="full_width">
             {this.props.children}
         </Container>

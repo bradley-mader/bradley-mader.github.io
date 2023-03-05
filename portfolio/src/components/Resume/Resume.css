@@ -1,14 +1,18 @@
 ﻿#Resume_Body{
   background-color: #FFF;
-  font-family: Bahnschrift;
+  padding: .5in;
+}
+@media print{
+  #Resume_Body{
+    padding: none;
+  }  
 }
 #Resume_Banner{
   position: relative;
   width:100%;
 }
 #Resume_TitleContainer{
-  width: 60%;
-  padding: 1em;
+  width: 63%;
 }
 #Resume_ContactInfo{
   position: absolute;
@@ -17,12 +21,11 @@
   padding:1em;
   top:0%;
   right:0%;
-  width: 40%;
+  width: 35%;
   text-align: left;
   font-size: 10pt;
 }
 .Resume_ContactLabel{
-  width:28%;
 }
 
 #Resume_Name{

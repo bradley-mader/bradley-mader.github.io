@@ -10,9 +10,16 @@ const ProfileTitle = styled.div`
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
+    display: block;
+    @media (max-width : 768px){
+        display:none;
+    }
 `;
 
 const Header = styled.div`
+    @media print{
+        display:none;
+    }
 `;
 
 export class NavMenu extends Component {
