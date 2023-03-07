@@ -9,18 +9,31 @@ const ResumeContainer = styled.div`
       position: relative;
       border: solid 2px #bbbbbb;
       background-color: #eeeeee;
-      margin-left: 50%;
+      margin: 0% 0% 0% 50%;
       border-radius: 5px 5px 0px 0px;
       width:8.5in;
       transform:translate(-50%, 0%);
+
+      @media (max-width: 900px){
+        width: 6.375in;
+      }
+
+      @media (max-width: 660px){
+        width: 4.25in;
+      }
+
       @media print{
-        position:fixed;
+        position:absolute;
+        display:block;
+        width:100%;
+        margin: 0;
+        padding: 0;
+        left:0;
+        top:0;
         border:none;
         background-color:#FFF
-        margin:.5in;
-        width:7.5in;
-        padding:none;
         border-radius:none;
+        transform: none;
       }
     `;
 
@@ -46,12 +59,7 @@ export class Resume extends Component {
   }
 
   print(){     
-    var newWin = window.open('', '_blank', 'toolbar=0,location=0,menubar=0');
-    newWin.document.head.innerHTML = window.document.head.innerHTML;
-    newWin.document.head.innerHTML += '<title>Bradley Mader - Software Engineer</title>';
-    newWin.document.body.innerHTML = document.getElementById('print_container').innerHTML;
-    newWin.print();
-    newWin.close();
+    window.print();
   }
 
   render() {
@@ -67,23 +75,32 @@ export class Resume extends Component {
                       <div id='Resume_TitleContainer'>
                         <p id="Resume_Name" className='full_break'>Bradley Mader</p>
                         <p id="Resume_ProfileStatement">
-                          Experienced Backend Engineer with demonstrated expertise building backend web services and REST APIs, 
+                          Experienced Backend Engineer with expertise building backend web services and REST APIs, 
                           constructing and maintaining CI/CD pipelines, working with cloud technologies including Azure, Docker, 
                           Kubernetes and more in the FinTech and Gaming Industries.
                         </p>
                       </div>
                       <div id="Resume_ContactInfo">
-                        <p><label className='Resume_ContactLabel'>W:</label> bradley-mader.github.io</p>
-                        <p><label className='Resume_ContactLabel'>L:</label> linkedin.com/in/bradley-mader</p>
-                        <p><label className='Resume_ContactLabel'>I:</label> bmader23.itch.io</p>
-                        <p><label className='Resume_ContactLabel'>E:</label> mader.bradley@gmail.com</p>
-                        <p><label className='Resume_ContactLabel'>T:</label> @BMMader</p>
+                        <div id="Resume_ContactLabelBackdrop">
+                          <img src="web_logo.png" className='Resume_ContactLabel'/>
+                          <img src="linkedin.png" className='Resume_ContactLabel'/>
+                          <img src="itchio.svg" width="26px" height="26px" className='Resume_ContactLabel'/>
+                          <img src="email_logo.png" width="26px" height="26px" className='Resume_ContactLabel'/>
+                          <img src="twitter.svg" width="26px" height="26px" className='Resume_ContactLabel'/>
+                        </div>
+                        <div id="Resume_ContactBackdrop">
+                          <p className='Resume_ContactPoint'>bradley-mader.github.io</p>
+                          <p className='Resume_ContactPoint'>linkedin.com/in/bradley-mader</p>
+                          <p className='Resume_ContactPoint'>bmader23.itch.io</p>
+                          <p className='Resume_ContactPoint'>mader.bradley@gmail.com</p>
+                          <p className='Resume_ContactPoint'>@BMMader</p>
+                        </div>
                       </div>
                     </div>
-                    <h4 className='full_break'>Work Experience</h4>
+                    <h4 className='Resume_SectionTitle full_break'>Work Experience</h4>
                     <div className='section_content'>
                       <div className="work_title_bar">
-                        <div className='work_title'>Electronic Arts - Software Engineer</div>
+                        <div className='work_title'>Software Engineer - Electronic Arts</div>
                         <div className='work_daterange'>July 2022 - Present</div>
                       </div>
                       <ul>
@@ -93,7 +110,7 @@ export class Resume extends Component {
                         <li>Collaborated with domain engineers to broaden interfaces and reduce need for artisonal solutions to overlapping problems between client teams.</li>
                       </ul>
                       <div className="work_title_bar">
-                        <div className='work_title'>Boeing Employees' Credit Union - Software Developer</div>
+                        <div className='work_title'>Software Developer - BECU</div>
                         <div className='work_daterange'>October 2018 - July 2022</div>
                       </div>
                       <ul>
@@ -101,12 +118,11 @@ export class Resume extends Component {
                         <li>Implemented Backend .NET Core Microservices with an n-tier architecture.</li>
                         <li>Prototyped and implemented Azure Patterns which were later adopted across the organization including API 
                           Manager, Functions and Container Instances hosting Docker images.</li>
-                        <li>Extracted data from SQL databases across multiple domains.</li>
                         <li>Collaborated with internal and external engineers to determine architecture and implement connections to 
                           a diverse array of web services including REST and SOAP APIs.</li>
                       </ul>
                       <div className="work_title_bar">
-                        <div className='work_title'>Boeing Employees' Credit Union - Performance Analyst</div>
+                        <div className='work_title'>Performance Analyst - BECU</div>
                         <div className='work_daterange'>October 2018 - July 2022</div>
                       </div>
                       <ul>
@@ -117,9 +133,12 @@ export class Resume extends Component {
                           Engineered pilot scheduling platform to feed information from forecasting models back to 
                           individual managers. 
                         </li>
+                        <li> 
+                          Developed Quality Assurance program enabling centralization of QA processes
+                        </li>
                       </ul>
                     </div>
-                    <h4 className='full_break'>Education</h4>
+                    <h4 className='Resume_SectionTitle full_break'>Education</h4>
                     <div className='section_content'>
                       <div className="work_title_bar">
                         <div className='work_title'>B.S. in Computer Science - Oregon State University</div>
@@ -130,7 +149,7 @@ export class Resume extends Component {
                         <div className='work_daterange'>June 2012</div>
                       </div>
                     </div>
-                    <h4 className='full_break'>Skills</h4>
+                    <h4 className='Resume_SectionTitle full_break'>Skills</h4>
                     <div className='section_content'>
                       <div className='Resume_SkillCategory'>
                         <p className='Resume_SkillCategoryTitle'></p>
@@ -152,8 +171,6 @@ export class Resume extends Component {
                         <div className='Resume_Skill Resume_PrimarySkill Resume_LastSkillInSet'>Docker</div>
                         <div className='Resume_Skill Resume_PrimarySkill Resume_LastSkillInSet'>Kubernetes</div>
                       </div>
-                      
-
                     </div>
                   </div>
                 </div>

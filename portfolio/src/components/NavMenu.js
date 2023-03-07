@@ -11,7 +11,7 @@ const ProfileTitle = styled.div`
     left:50%;
     transform:translate(-50%, -50%);
     display: block;
-    @media (max-width : 768px){
+    @media (max-width : 660px){
         display:none;
     }
 `;

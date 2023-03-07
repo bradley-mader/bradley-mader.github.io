@@ -5,7 +5,6 @@ import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardImg, Row, Col } 
 const Banner = styled.div`
     position: relative;
     padding: 0em;
-    overflow: hidden;
 `;
 
 const ProfileContainer = styled.div`
@@ -31,7 +30,7 @@ export class ProfileBanner extends Component {
 
     render() {
         return (
-            <Banner>   
+            <Banner>
                 <ProfileContainer> 
                     <ProfileImage src='profile_image_round.png'/>
                     <h1>Bradley Mader</h1>
