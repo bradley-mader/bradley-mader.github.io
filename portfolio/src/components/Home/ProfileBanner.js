@@ -8,11 +8,23 @@ const Banner = styled.div`
 `;
 
 const ProfileContainer = styled.div`
-    text-align: center;
+position:relative;
+    left: 25%;
+    width:50%;
 `
-const ProfileImage = styled.img`
-    border-radius:50%;
-    margin-top:20vh;
+
+const HiText = styled.h1`
+    display: inline;
+`
+const InterludeText = styled.p`
+    display: inline;
+`
+const FirstNameText = styled.h1`
+    margin-left:19%;
+`
+const LastNameText = styled.h1`
+    margin-left:39%;
+    left:20%;
 `
 
 export class ProfileBanner extends Component {
@@ -32,10 +44,11 @@ export class ProfileBanner extends Component {
         return (
             <Banner>
                 <ProfileContainer> 
-                    <ProfileImage src='profile_image_round.png'/>
-                    <h1>Bradley Mader</h1>
-                    <h3>Software Engineer</h3>
-                    <h3>Online/Backend</h3>
+                    <HiText className='text-primary left-justified xxl-font'>Hi<span className='text-bright'>! </span></HiText>
+                    <InterludeText className='text-light left-justified m-font'>my name is</InterludeText>
+                    <FirstNameText className='text-bright xxl-font left-justified script-font'>Bradley</FirstNameText>
+                    <LastNameText className='text-bright xxl-font left-justified script-font'>Mader<span className='text-primary left-justified sans-serif-font xxl-font'>.</span></LastNameText>
+                    <p className='text-light m-font left-justified'>I am a Software Engineer that focuses primarily on web technologies - Specifically related to interconnected real-time experiences.</p>
                 </ProfileContainer>
             </Banner>
         );

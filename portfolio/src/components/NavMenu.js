@@ -47,11 +47,6 @@ export class NavMenu extends Component {
                         <NavbarBrand tag={Link} to="/">    
                             <img src="initials.svg" height="40px"  tag={Link} to="/"/>
                         </NavbarBrand>
-                        <NavbarBrand tag={Link} to="/">
-                            <ProfileTitle>
-                                Bradley Mader
-                            </ProfileTitle>
-                        </NavbarBrand>
                         <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
                             <ul className="navbar-nav flex-grow">
