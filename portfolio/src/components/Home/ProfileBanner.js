@@ -12,10 +12,6 @@ position:relative;
     left: 35%;
     width:30%;
     @media (max-width: 1400px){
-        left: 30%;
-        width: 40%;
-    }
-    @media (max-width: 1200px){
         left: 25%;
         width: 50%;
     }

@@ -24,6 +24,26 @@ $font-sizes:(
     @return map-get($font-sizes, $key);
 }
 
+
+/////////////////////////////////////////////////////NAVBAR
+@media (max-width: 575px){
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler-icon:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    .navbar-toggler-icon{
+        background-image: url("../../public/menu_icon.png");
+    }
+    .navbar-nav{
+        font-size: 30pt;
+        margin: .5em;
+    }
+}
+
+////////////////////////////PROFILE
+
 .profileTitle{
     color: theme-color("primary");
 }
