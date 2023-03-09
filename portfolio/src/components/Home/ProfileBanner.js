@@ -9,24 +9,43 @@ const Banner = styled.div`
 
 const ProfileContainer = styled.div`
 position:relative;
-    left: 25%;
-    width:50%;
+    left: 35%;
+    width:30%;
+    @media (max-width: 1400px){
+        left: 30%;
+        width: 40%;
+    }
+    @media (max-width: 1200px){
+        left: 25%;
+        width: 50%;
+    }
+    @media (max-width: 992px){
+        left:15%;
+        width: 70%;
+    }
+    @media (max-width: 600px){
+        left:10%;
+        width: 80%;
+    }
 `
 
-const HiText = styled.h1`
-    display: inline;
+const HiText = styled.div`
+    display:inline-block;
 `
-const InterludeText = styled.p`
-    display: inline;
+const InterludeText = styled.span`
+    display:inline-block;
+    vertical-align: bottom;
+    margin-left: 7%;
 `
 const FirstNameText = styled.h1`
-    margin-left:19%;
+    text-align: center;
 `
 const LastNameText = styled.h1`
-    margin-left:39%;
-    left:20%;
+    text-align: right;
 `
-
+const DescriptionText = styled.div`
+    font-size:20pt;
+`
 export class ProfileBanner extends Component {
     static displayName = ProfileBanner.name;
 
@@ -44,11 +63,12 @@ export class ProfileBanner extends Component {
         return (
             <Banner>
                 <ProfileContainer> 
-                    <HiText className='text-primary left-justified xxl-font'>Hi<span className='text-bright'>! </span></HiText>
-                    <InterludeText className='text-light left-justified m-font'>my name is</InterludeText>
+                    <HiText className='text-primary left-justified xxl-font'>Hi<span className='text-bright'>!</span></HiText>
+                    <InterludeText className='text-light left-justified m-font'>My name is</InterludeText>
                     <FirstNameText className='text-bright xxl-font left-justified script-font'>Bradley</FirstNameText>
                     <LastNameText className='text-bright xxl-font left-justified script-font'>Mader<span className='text-primary left-justified sans-serif-font xxl-font'>.</span></LastNameText>
-                    <p className='text-light m-font left-justified'>I am a Software Engineer that focuses primarily on web technologies - Specifically related to interconnected real-time experiences.</p>
+                    <DescriptionText className='text-light m-font left-justified'>I am a Software Engineer that focuses primarily on web technologies - Specifically 
+                    related to interconnected real-time experiences.</DescriptionText>
                 </ProfileContainer>
             </Banner>
         );
