@@ -10,7 +10,6 @@ const ProfileContainer = styled.div`
 position:relative;
     left: 35%;
     width:30%;
-    margin-bottom:20%;
     @media (max-width: 1400px){
         left: 25%;
         width: 50%;

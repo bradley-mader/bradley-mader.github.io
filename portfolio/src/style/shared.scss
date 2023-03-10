@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Bahnschrift;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  @media (max-width: 900px){
+    body{
+      -ms-overflow-style: none; /* for Internet Explorer, Edge */
+      scrollbar-width: none; /* for Firefox */
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    color: #E01A76;
+  }
+  .full_width {
+      padding-left: 0vw;
+      padding-right: 0vw;
+      max-width: none;
+  }
+  
+  
+  @media print{
+    .not_printable{
+      display:none;/*Disable Scrollbar: Chrome, Safari, Opera*/
+    }
+  }
