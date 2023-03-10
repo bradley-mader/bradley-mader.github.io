@@ -7,8 +7,9 @@
   background-color: #000;
 }
 
+
 @media print{
   .not_printable{
-    display:none;
+    display:none;/*Disable Scrollbar: Chrome, Safari, Opera*/
   }
 }
