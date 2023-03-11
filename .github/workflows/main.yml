@@ -6,9 +6,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-
-    - name: Deploy react app to github pages
-      uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: "18.4.1"
+    - run: npm install
+    - run: npm build
+    - run: npm deploy
 env:
-    GITHUB_TOKEN: ${{ github.token }}
+  GITHUB_TOKEN: ${{ github.token }}
