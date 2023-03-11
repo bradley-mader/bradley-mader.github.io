@@ -52,11 +52,6 @@ const PrintIcon = styled.img`
 export class Resume extends Component {
   static displayName = Resume.name;
 
-  constructor(props) {
-    super(props);
-    
-  }
-
   print(){     
     window.print();
   }
