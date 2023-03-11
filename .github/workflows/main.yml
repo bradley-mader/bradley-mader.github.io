@@ -17,6 +17,7 @@ jobs:
         node-version: 18
     - run: git config --global user.email "mader.bradley@gmail.com"
     - run: git config --global user.name "Bradley Mader"
+    - run: git remote set-url origin https://git:${{ secrets.GH_PAGES_SECRET }}@github.com:bradley-mader/bradley-mader.github.io.git
     - run: npm install
     - run: npm run build
     - run: npm run deploy
