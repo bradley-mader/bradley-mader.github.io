@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && cp build/index.html build/404.html && cp rm -rf out && cp -r build out",
+    "build": "react-scripts build && cp build/index.html build/404.html && rm -r out && cp -r build out",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
