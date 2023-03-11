@@ -61,7 +61,7 @@ export class Home extends Component {
         return (
             <Banner>
                 <ProfileContainer> 
-                    <HiText className='text-primary left-justified xxl-font'>HiTEST<span className='text-bright'>!</span></HiText>
+                    <HiText className='text-primary left-justified xxl-font'>Hi<span className='text-bright'>!</span></HiText>
                     <InterludeText className='text-light left-justified m-font'>My name is</InterludeText>
                     <FirstNameText className='text-bright xxl-font left-justified script-font'>Bradley</FirstNameText>
                     <LastNameText className='text-bright xxl-font left-justified script-font'>Mader<span className='text-primary left-justified sans-serif-font xxl-font'>.</span></LastNameText>
