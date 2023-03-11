@@ -25,6 +25,15 @@ $font-sizes:(
 }
 
 
+
+.dark-background{
+    background-color: theme-color("dark");
+}
+
+.dark-bg-on-hover:hover{
+    background-color: theme-color("dark");
+}
+
 /////////////////////////////////////////////////////NAVBAR
 @media (max-width: 575px){
     .navbar-toggler:focus,
