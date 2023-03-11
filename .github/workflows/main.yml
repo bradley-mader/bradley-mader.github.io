@@ -17,9 +17,11 @@ jobs:
         node-version: 18
     - run: git config --global user.email "mader.bradley@gmail.com"
     - run: git config --global user.name "bradley-mader"
-    - run: git remote set-url origin https://bradley-mader:${{ secrets.GH_PAGES_SECRET }}@github.com/bradley-mader/bradley-mader.github.io.git
     - run: npm install
     - run: npm run build
-    - run: npm run deploy
+    - uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: gh-pages
+          build_dir: out
 env:
-  GITHUB_TOKEN: ${{ secrets.GH_PAGES_SECRET }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
