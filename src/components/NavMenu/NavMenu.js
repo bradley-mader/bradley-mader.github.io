@@ -1,20 +1,9 @@
 import React, { Component } from 'react';
-import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
 
 import styled from 'styled-components';
-
-const ProfileTitle = styled.div`
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    display: block;
-    @media (max-width : 660px){
-        display:none;
-    }
-`;
 
 const Header = styled.div`
     @media print{

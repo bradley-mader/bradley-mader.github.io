@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardText, Button, Container } from 'reactstrap';
 
 import styled from 'styled-components';
 
@@ -82,11 +81,11 @@ export class Resume extends Component {
                       </div>
                       <div id="Resume_ContactInfo">
                         <div id="Resume_ContactLabelBackdrop">
-                          <img src="web_logo.png" className='Resume_ContactLabel'/>
-                          <img src="linkedin.png" className='Resume_ContactLabel'/>
-                          <img src="itchio.svg" width="26px" height="26px" className='Resume_ContactLabel'/>
-                          <img src="email_logo.png" width="26px" height="26px" className='Resume_ContactLabel'/>
-                          <img src="twitter.svg" width="26px" height="26px" className='Resume_ContactLabel'/>
+                          <img src="web_logo.png" alt="W" className='Resume_ContactLabel'/>
+                          <img src="linkedin.png" alt="L" className='Resume_ContactLabel'/>
+                          <img src="itchio.svg" alt="I" width="26px" height="26px" className='Resume_ContactLabel'/>
+                          <img src="email_logo.png" alt="E" width="26px" height="26px" className='Resume_ContactLabel'/>
+                          <img src="twitter.svg" alt="T" width="26px" height="26px" className='Resume_ContactLabel'/>
                         </div>
                         <div id="Resume_ContactBackdrop">
                           <p className='Resume_ContactPoint'>bradley-mader.github.io</p>
