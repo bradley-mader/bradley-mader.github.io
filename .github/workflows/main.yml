@@ -6,9 +6,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-
-    - name: Deploy react app to github pages
-      uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - run: git config --global user.email "mader.bradley@gmail.com"
+    - run: git config --global user.name "Bradley Mader"
+    - run: npm install
+    - run: npm run build
+    - uses: crazy-max/ghaction-github-pages@v3
+      with:
+        target_branch: gh_pages
+        build_dir: build
 env:
-    GITHUB_TOKEN: ${{ github.token }}
+  GITHUB_TOKEN: ${{ github.token }}
