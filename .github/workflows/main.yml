@@ -20,8 +20,8 @@ jobs:
     - run: npm install
     - run: npm run build
     - uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: gh-pages
-          build_dir: out
+      with:
+        target_branch: gh-pages
+        build_dir: out
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
