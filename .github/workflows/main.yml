@@ -12,6 +12,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 18
+    - run: git config --global user.email "mader.bradley@gmail.com"
+    - run: git config --global user.name "Bradley Mader"
     - run: npm install
     - run: npm run build
     - run: npm run deploy
