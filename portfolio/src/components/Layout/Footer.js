@@ -7,7 +7,7 @@ const FooterBox = styled.div`
 const ContactChannelIcon = styled.img`
     float:right;
     display:inline-block;
-    margin: 15px 15px 15px 0px;
+    margin: 5px 0px 5px 0px;
     padding:10px;
     width:52px;
     &:hover{
