@@ -19,6 +19,7 @@ jobs:
     - run: git config --global user.name "bradley-mader"
     - run: npm install
     - run: npm run build
+    - run: npm run postbuild
     - uses: crazy-max/ghaction-github-pages@v3
       with:
         target_branch: gh-pages
