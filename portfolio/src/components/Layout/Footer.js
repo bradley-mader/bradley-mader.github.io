@@ -16,6 +16,7 @@ export const Footer = () =>
   return (<FooterBox>
         <a href="https://twitter.com/BMMader" target="_blank"><ContactChannelIcon src="twitter.svg"></ContactChannelIcon></a>
         <a href="https://bmader23.itch.io" target="_blank"><ContactChannelIcon src="itchio.svg"></ContactChannelIcon></a>
+        <a href="https://medium.com/@mader.bradley" target="_blank"><ContactChannelIcon src="medium.png"></ContactChannelIcon></a>
         <a href="mailto:mader.bradley@gmail.com"><ContactChannelIcon src="email_logo.png"></ContactChannelIcon></a>
         <a href="https://linkedin.com/in/bradley-mader" target="_blank"><ContactChannelIcon src="linkedin.png"></ContactChannelIcon></a>
     </FooterBox>);
