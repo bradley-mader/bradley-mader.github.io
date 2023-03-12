@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { NavMenu } from '../NavMenu/NavMenu';
-import {Footer} from './Footer';
+import { NavMenu } from './NavMenu/NavMenu';
+import {Footer} from './Footer/Footer';
 
 const BodyContainer = styled.div`
   margin-bottom:10%;

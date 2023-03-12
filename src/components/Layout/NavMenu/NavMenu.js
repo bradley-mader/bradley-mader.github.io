@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import './NavMenu.css';
 
 import styled from 'styled-components';
+
+import './NavMenu.scss'
 
 const Header = styled.div`
     @media print{
         display:none;
     }
 `;
+
+const NavSelector = styled.div`
+    border-radius:40pt;
+`
 
 export class NavMenu extends Component {
     static displayName = NavMenu.name;
@@ -32,7 +37,7 @@ export class NavMenu extends Component {
         render () {
             return (
                 <Header>
-                    <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white mb-3" light>
+                    <Navbar className="navbar-expand-sm navbar-toggleable-sm" light>
                         <NavbarBrand tag={Link} to="/">    
                             <img src="initials.svg" alt="Bradley Mader" height="40px"  tag={Link} to="/"/>
                         </NavbarBrand>
@@ -40,10 +45,14 @@ export class NavMenu extends Component {
                         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
                             <ul className="navbar-nav flex-grow">
                                 <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
+                                    <NavLink tag={Link} className="text-dark text-centered" to="/">
+                                        <NavSelector className="bright-text-on-hover">Home</NavSelector>
+                                    </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/Resume">Resume</NavLink>
+                                    <NavLink tag={Link} className="text-dark text-centered" to="/Resume">
+                                        <NavSelector className="bright-text-on-hover">Resume</NavSelector>
+                                    </NavLink>
                                 </NavItem>
                             </ul>
                         </Collapse>

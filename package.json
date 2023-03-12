@@ -20,6 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "localbuild": "react-scripts build",
     "build": "react-scripts build && cp build/index.html build/404.html && rm -r out && cp -r build out",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

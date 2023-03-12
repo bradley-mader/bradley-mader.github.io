@@ -30,10 +30,20 @@ $font-sizes:(
     background-color: theme-color("dark");
 }
 
+
 .dark-bg-on-hover:hover{
     background-color: theme-color("dark");
 }
+.bright-text-on-hover:hover{
+    color: theme-color("bright");
+}
 
+.text-centered{
+    text-align: center;
+}
+.underline-on-hover:hover{
+    text-decoration: underline;
+}
 /////////////////////////////////////////////////////NAVBAR
 @media (max-width: 575px){
     .navbar-toggler:focus,
@@ -47,7 +57,7 @@ $font-sizes:(
     }
     .navbar-nav{
         font-size: 30pt;
-        margin: .5em;
+        padding: 1em;
     }
 }
 
