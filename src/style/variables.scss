@@ -7,6 +7,7 @@ $theme-colors:(
     "light":#53b1b1,
     "bright":#f6c624,
     "dark":#1c5858,
+    "darkest":#11222c
 );
 $font-sizes:(
     "s":12pt,
@@ -29,13 +30,36 @@ $font-sizes:(
 .dark-background{
     background-color: theme-color("dark");
 }
-
+.darkest-background{
+    background-color: theme-color("darkest");
+}
+.bright-background{
+    background-color: theme-color("bright");
+}
+.light-background{
+    background-color: theme-color("light");
+}
 
 .dark-bg-on-hover:hover{
     background-color: theme-color("dark");
 }
-.bright-text-on-hover:hover{
+.bright-text-on-hover:hover,
+.bright-text-on-hover:hover *{
     color: theme-color("bright");
+}
+.dark-text-on-hover:hover{
+    color: theme-color("dark");
+}
+
+.primary-border{
+    border:2px solid theme-color("primary");
+}
+.bright-border-on-hover:hover{
+    border:2px solid theme-color("bright");
+}
+
+.darkest-text{
+    color: theme-color("darkest");
 }
 
 .text-centered{
@@ -45,6 +69,13 @@ $font-sizes:(
     text-decoration: underline;
 }
 /////////////////////////////////////////////////////NAVBAR
+$navbar-light-color: theme-color("primary");
+$navbar-light-hover-color: theme-color("bright");
+
+.navbar-nav{
+    font-weight: bold;
+}
+
 @media (max-width: 575px){
     .navbar-toggler:focus,
     .navbar-toggler:active,
@@ -60,6 +91,7 @@ $font-sizes:(
         padding: 1em;
     }
 }
+
 
 ////////////////////////////PROFILE
 
@@ -112,4 +144,8 @@ a {
 }
 .sans-serif-font{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pointer-cursor{
+    cursor:pointer;
 }
