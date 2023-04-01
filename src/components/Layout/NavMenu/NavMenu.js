@@ -16,18 +16,18 @@ const NavSelector = styled.div`
     border-radius:40pt;
 `;
 
-const NavDropdown = styled.div`
+// const NavDropdown = styled.div`
     
-    padding:1em;
-    position: absolute;
-    border-radius: 4px;
-    min-width: 8em;
-    z-index:100;
-    @media (max-width: 575px){
-        position:relative;
-        padding:.5em;
-    }
-`;
+//     padding:1em;
+//     position: absolute;
+//     border-radius: 4px;
+//     min-width: 8em;
+//     z-index:100;
+//     @media (max-width: 575px){
+//         position:relative;
+//         padding:.5em;
+//     }
+// `;
 
 
 export class NavMenu extends Component {
