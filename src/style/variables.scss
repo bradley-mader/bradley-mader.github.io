@@ -58,6 +58,13 @@ $font-sizes:(
     border:2px solid theme-color("bright");
 }
 
+.primary-large-border-top{
+    border-top: 2vh solid theme-color("primary");
+}
+.darkest-large-border-top{
+    border-top: 2vh solid theme-color("darkest");
+}
+
 .darkest-text{
     color: theme-color("darkest");
 }

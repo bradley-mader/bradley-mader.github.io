@@ -82,15 +82,10 @@ export class NavMenu extends Component {
                                         <NavSelector>Home</NavSelector>
                                     </NavLink>
                                 </NavItem>
-                                <NavItem onMouseOver={this.showProjectsDropdown.bind(this)} onMouseLeave={this.hideProjectsDropdown.bind(this)}>
-                                    <NavLink>
-                                        <NavSelector className="pointer-cursor">Projects</NavSelector>
+                                <NavItem>
+                                    <NavLink tag={Link} to="/AboutMe">
+                                        <NavSelector>About Me</NavSelector>
                                     </NavLink>
-                                    <NavDropdown className='primary-border bright-border-on-hover darkest-background' hidden={!this.state.projectsShown}>
-                                        <NavLink tag={Link} className="pointer-cursor" to="/Ubiqi">
-                                            <NavSelector className="sub-nav-link">Ubiqi</NavSelector>
-                                        </NavLink>
-                                    </NavDropdown>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink tag={Link} to="/Resume">
