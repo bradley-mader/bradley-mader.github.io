@@ -54,11 +54,11 @@ export const AboutMe = () => {
     return (
         <FamilyContainer className='dark-text'>
             <FamilyBannerPhoto>
-                <img className='fb-image' src='fam_foto.jpeg'></img>
+                <img className='fb-image' src='fam_foto.jpeg' alt=""></img>
             </FamilyBannerPhoto>
             <FamilyBanner>
                 <div className='fb-image'>
-                    <img src='Washington.png'/>
+                    <img src='Washington.png' alt=""/>
                 </div>
                 <div className='fb-content'>
                     I live in Lynnwood, WA with my wife, two children, dog, and cat where I spend the vast majority of my time 
@@ -80,7 +80,7 @@ export const AboutMe = () => {
             </FamilyBanner>
             <FamilyBanner className='darkest-large-border-top'>
                 <div className='fb-image-small'>
-                    <img src='WSU.png'/>
+                    <img src='WSU.png' alt=""/>
                 </div>
                 <div className='fb-content-small'>
                     I attended college at Washington State University to earn my Bacchelors of Science in Biology. After several years in the workforce, I fell 
@@ -88,7 +88,7 @@ export const AboutMe = () => {
                     Computer Science in 2016.
                 </div>
                 <div className='fb-image-small'>
-                    <img src='OSU.png'/>
+                    <img src='OSU.png' alt=""/>
                 </div>
             </FamilyBanner>
         </FamilyContainer>
