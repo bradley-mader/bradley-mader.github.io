@@ -18,29 +18,63 @@ position:relative;
         left:15%;
         width: 70%;
     }
-    @media (max-width: 600px){
-        left:10%;
-        width: 80%;
+    @media (max-width: 400px){
+        left:15%;
+        width: 70%;
     }
 `
 
 const HiText = styled.div`
     display:inline-block;
+    @media (max-width: 550px){
+        font-size: 55pt;
+        line-height: 85pt;
+    }
+    @media (max-width: 400px){
+        font-size: 50pt;
+        line-height: 80pt;
+    }
 `
 const InterludeText = styled.span`
     display:inline-block;
     vertical-align: bottom;
     margin-left: 7%;
+    @media (max-width: 550px){
+        font-size: 18pt;
+    }
+    @media (max-width: 400px){
+        font-size: 16pt;
+    }
 `
 const FirstNameText = styled.h1`
     text-align: center;
+    @media (max-width: 550px){
+        font-size: 55pt;
+        line-height: 55pt;
+        padding-top: 10pt;
+    }
+    @media (max-width: 400px){
+        font-size: 50pt;
+        line-height: 50pt;
+    }
 `
 const LastNameText = styled.h1`
     text-align: right;
+    @media (max-width: 550px){
+        font-size: 55pt;
+        line-height: 55pt;
+    }
+    @media (max-width: 400px){
+        font-size: 50pt;
+        line-height: 50pt;
+    }
 `
 const DescriptionText = styled.div`
     font-size:20pt;
-    @media (max-width 992px){
+    @media (max-width: 550px){
+        font-size: 18pt;
+    }
+    @media (max-width: 400px){
         font-size:16pt;
     }
 `

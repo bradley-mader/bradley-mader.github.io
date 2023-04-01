@@ -14,7 +14,21 @@ const Header = styled.div`
 
 const NavSelector = styled.div`
     border-radius:40pt;
-`
+`;
+
+const NavDropdown = styled.div`
+    
+    padding:1em;
+    position: absolute;
+    border-radius: 4px;
+    min-width: 8em;
+    z-index:100;
+    @media (max-width: 575px){
+        position:relative;
+        padding:.5em;
+    }
+`;
+
 
 export class NavMenu extends Component {
     static displayName = NavMenu.name;
@@ -24,14 +38,33 @@ export class NavMenu extends Component {
 
         this.toggleNavbar = this.toggleNavbar.bind(this);
         this.state = {
-            collapsed: true
+            collapsed: true,
+            projectsShown: false,
         };
     }
 
         toggleNavbar () {
             this.setState({
-                collapsed: !this.state.collapsed
+                collapsed: !this.state.collapsed,
             });
+        }
+
+        toggleProjectsDropdown(){
+            this.setState({
+                projectsShown: !this.state.projectsShown,
+            });
+        }
+
+        showProjectsDropdown(){
+            this.setState({
+                projectsShown: !this.state.projecteShown,
+            })
+        }
+
+        hideProjectsDropdown(){
+            this.setState({
+                projectsShown: false,
+            })
         }
 
         render () {
@@ -45,13 +78,18 @@ export class NavMenu extends Component {
                         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
                             <ul className="navbar-nav flex-grow">
                                 <NavItem>
-                                    <NavLink tag={Link} className="text-dark text-centered" to="/">
-                                        <NavSelector className="bright-text-on-hover">Home</NavSelector>
+                                    <NavLink tag={Link} to="/">
+                                        <NavSelector>Home</NavSelector>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink tag={Link} className="text-dark text-centered" to="/Resume">
-                                        <NavSelector className="bright-text-on-hover">Resume</NavSelector>
+                                    <NavLink tag={Link} to="/AboutMe">
+                                        <NavSelector>About Me</NavSelector>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink tag={Link} to="/Resume">
+                                        <NavSelector>Resume</NavSelector>
                                     </NavLink>
                                 </NavItem>
                             </ul>
