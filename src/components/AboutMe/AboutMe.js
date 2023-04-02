@@ -9,17 +9,38 @@ const FamilyContainer = styled.div`
 
 const FamilyBanner = styled.div`
     font-size: 26pt;
+    @media (max-width: 1300px){
+        font-size: 22pt;
+        text-align: center;
+    }
+    @media (max-width: 1100px){
+        font-size: 18pt;
+    }
+    @media (max-width: 900px){
+        font-size: 14pt;
+    }
+    @media (max-width: 700px){
+        font-size: 16pt;
+    }
     padding: 8vw 10vw;
     & .fb-content{
         display: inline-block;
         width:40vw;
         vertical-align:middle;
+        @media (max-width: 1300px){
+            margin-left:0;
+            width:80%;
+            padding-left: 0 !important;
+        }
     }
     & .fb-content-small{
         display: inline-block;
         font-size: 16pt;
         width:30vw;
         vertical-align:middle;
+        @media (max-width: 1300px){
+            width:60vw;
+        }
     }
     & .fb-content-middle{
         width:100%;
@@ -29,12 +50,24 @@ const FamilyBanner = styled.div`
     & .fb-image{
         display:inline-block;
         width:32vw;
+        padding: 4vw;
         border-radius: 4px;
+        @media (max-width: 700px){
+            display:block;
+            margin-left:30%;
+            width: 40%;
+        }
     }
     & .fb-image-small{
         display:inline-block;
         width:20vw;
         border-radius: 4px;
+        @media (max-width: 1300px){
+            display:block;
+            margin-left:30%;
+            width:40%;
+            padding: 4vw;
+        }
     }
     & > :nth-child(n+2){
         padding-left: 4vw;
