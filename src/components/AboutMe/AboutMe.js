@@ -50,8 +50,8 @@ const FamilyBanner = styled.div`
     & .fb-image{
         display:inline-block;
         width:32vw;
-        padding: 4vw;
         border-radius: 4px;
+        padding-bottom: 4vw;
         @media (max-width: 700px){
             display:block;
             margin-left:30%;
