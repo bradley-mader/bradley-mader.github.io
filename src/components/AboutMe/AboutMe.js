@@ -141,8 +141,8 @@ export class AboutMe extends Component {
                     <FamilyBanner>
                         
                         <div style={{width: '100%', display: 'inline-block'}}>
-                            <img src='ea_logo_black.png' alt='EA Logo' style={{marginLeft: '25%', width:'25%', padding: '10px'}}/>
-                            <img src='fb_logo.png' alt='Frostbite Logo' style={{width:'25%', padding: '10px'}}/>
+                            <img src='https://bradley-mader.github.io/ea_logo_black.png' alt='EA Logo' style={{marginLeft: '25%', width:'25%', padding: '10px'}}/>
+                            <img src='https://bradley-mader.github.io/fb_logo.png' alt='Frostbite Logo' style={{width:'25%', padding: '10px'}}/>
                         </div>
                         <div style={{padding:'1em 0em 0em 10%', width: '100%', display: 'inline-block'}}>
                             Software Engineer for Electronic Arts working on Frostbite Engine Integrations for the Dice studio since Summer 2022.
