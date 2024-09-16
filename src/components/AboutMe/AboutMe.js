@@ -51,8 +51,8 @@ const FamilyBanner = styled.div`
     }
     & .fb-content-middle{
         width:100%;
-        padding: 0vw 16vw;
-        text-align: center;
+        padding: 0vw 10vw;
+        text-align: left;
     }
     & .fb-image{
         display:inline-block;
@@ -131,15 +131,21 @@ export class AboutMe extends Component {
                         </div>
                     </FamilyBanner>
                     <FamilyBanner className='light-background'>
+                        <h1 style={{paddingBottom:'1em', marginTop: '-2em', textAlign:'center'}}>Professional Synopsis</h1>
                         <div className='fb-content-middle'>
-                            I have spent the nearly 6 years developing applications both web based and native. In that time, I have advanced initiatives to 
+                            I have spent the past 6 years developing applications both web based and native. In that time, I have advanced initiatives to 
                             move to cloud native architectures, automated testing, decommissioned legacy software systems, and improved UX of applications and 
                             workflows. Before that I spent 3 years working in data analytics including development of ETL pipelines, governing code quality and 
                             forecasting based on historical data.
+                            <br/><br/>
+                            I am most passionate about working on projects that allow for collaborative real-time experiences. My favorite backend programming 
+                            language is Go due to the simple and intuitive syntax, features specifically designed to support multithreading, ongoing reliable 
+                            maintenance and updates to the language, and relatively high performance benchmarks, but I have also extensively used C# and C++ in 
+                            the backend.
                         </div>
                     </FamilyBanner>
                     <FamilyBanner>
-                        
+                        <h1 style={{paddingBottom:'1em', marginTop: '-2em', textAlign:'center'}}>Professional History</h1>
                         <div style={{width: '100%', display: 'inline-block'}}>
                             <img src='https://bradley-mader.github.io/EA_logo_black.png' alt='EA Logo' style={{marginLeft: '25%', width:'25%', padding: '10px'}}/>
                             <img src='https://bradley-mader.github.io/fb_logo.png' alt='Frostbite Logo' style={{width:'25%', padding: '10px'}}/>
@@ -161,13 +167,9 @@ export class AboutMe extends Component {
                                 
                             </ul>
                         </div>
-                        <div style={{paddingTop:'1em'}}>
-                            I am most passionate about working on projects that allow for collaborative real-time experiences. My favorite backend programming 
-                            language is Go due to the simple syntax, features specifically designed to support multithreading and relatively high performance 
-                            benchmarks, but I have also extensively used C# and C++ in the backend.
-                        </div>
                     </FamilyBanner>
                     <FamilyBanner className='darkest-large-border-top'>
+                        <h1 style={{paddingBottom:'1em', marginTop: '-2em', textAlign:'center'}}>Education</h1>
                         <div className='fb-image-small'>
                             <img src='WSU.png' alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>
                         </div>
