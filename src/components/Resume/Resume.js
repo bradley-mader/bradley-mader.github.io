@@ -28,7 +28,7 @@ export class Resume extends Component {
   render() {
     return (
         <div>
-          <PrintContainer src='resume.pdf'/>
+          <PrintContainer src='https://bradley-mader.github.io/Resume.pdf'/>
         </div>
     );
   }
