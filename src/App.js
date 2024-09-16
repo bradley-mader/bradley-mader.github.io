@@ -6,15 +6,15 @@ import { Resume } from './components/Resume/Resume';
 import { AboutMe } from './components/AboutMe/AboutMe';
 
 export default class App extends Component {
-  static displayName = App.name;
+    static displayName = App.name;
 
     render () {
         return (
             <Layout>
                 <Routes>
-                    <Route exact path='/' element={<Home/>} />
-                    <Route path='/resume' element={<Resume/>} />
-                    <Route path='/aboutme' element={<AboutMe/>} />
+                    <Route exact path='/' element={<Home />} />
+                    <Route path='/resume' element={<Resume />} />
+                    <Route path='/aboutme' element={<AboutMe />} />
                 </Routes>
             </Layout>
         );
