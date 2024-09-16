@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Accordion from 'reactstrap';
 import styled from 'styled-components';
 import HashLoader from 'react-spinners/HashLoader';
 
