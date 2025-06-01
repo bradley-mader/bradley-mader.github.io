@@ -8,7 +8,7 @@ const PrintContainer = styled.iframe`
   position:relative;
   left:50%;
   width:8.5in;
-  height:25in;
+  height:23in;
   backdround:transparent;
   transform:translate(-50%, 0%);
   overflow:none;
