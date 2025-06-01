@@ -99,7 +99,9 @@ export class Home extends Component {
                     <InterludeText className='text-light left-justified m-font'>My name is</InterludeText>
                     <FirstNameText className='text-bright xxl-font left-justified script-font'>Bradley</FirstNameText>
                     <LastNameText className='text-bright xxl-font left-justified script-font'>Mader<span className='text-primary left-justified sans-serif-font xxl-font'>.</span></LastNameText>
-                    <DescriptionText className='text-light m-font left-justified'>I am a Backend Software Engineer that focuses primarily on distributed applications.</DescriptionText>
+                    <DescriptionText className='text-light m-font left-justified'>I am a Backend Software Engineer with nearly 7 years of experience focused primarily on distributed applications.
+                    Go | Kubernetes | PostgresQL | AWS | Azure
+                    </DescriptionText>
                 </ProfileContainer>
             </Banner>
         );
