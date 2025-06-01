@@ -8,7 +8,7 @@ const PrintContainer = styled.iframe`
   position:relative;
   left:50%;
   width:8.5in;
-  height:11.3in;
+  height:25in;
   backdround:transparent;
   transform:translate(-50%, 0%);
   overflow:none;
@@ -28,7 +28,7 @@ export class Resume extends Component {
   render() {
     return (
         <div>
-          <PrintContainer src='https://bradley-mader.github.io/Resume.pdf'/>
+          <PrintContainer src='./Resume.pdf'/>
         </div>
     );
   }
