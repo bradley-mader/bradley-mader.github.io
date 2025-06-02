@@ -72,7 +72,7 @@ export class NavMenu extends Component {
                 <Header>
                     <Navbar className="navbar-expand-sm navbar-toggleable-sm" light>
                         <NavbarBrand tag={Link} to="/">    
-                            <img src="initials.svg" alt="Bradley Mader" height="40px"  tag={Link} to="/"/>
+                            <img src="logo192.png" alt="Bradley Mader" height="40px"  tag={Link} to="/"/>
                         </NavbarBrand>
                         <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
