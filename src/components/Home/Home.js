@@ -100,7 +100,7 @@ export class Home extends Component {
                     <FirstNameText className='text-bright xxl-font left-justified script-font'>Bradley</FirstNameText>
                     <LastNameText className='text-bright xxl-font left-justified script-font'>Mader<span className='text-primary left-justified sans-serif-font xxl-font'>.</span></LastNameText>
                     <DescriptionText className='text-light m-font left-justified'>I am a Backend Software Engineer with nearly 7 years of experience focused primarily on distributed applications.</DescriptionText>
-                    <DescriptionText className='text-primary m-font center-justified'><img src="./Psych_Skills.png"/></DescriptionText>
+                    <DescriptionText className='text-primary m-font center-justified'><img src="./Psych_Skills.png" alt="GO | Kubernetes | PostgresQL | AWS | Azure"/></DescriptionText>
                 </ProfileContainer>
             </Banner>
         );
