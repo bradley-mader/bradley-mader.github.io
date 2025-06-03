@@ -1,8 +1,9 @@
 $theme-colors:(
-    "primary":#f69000,
-    "light":#53b1b1,
-    "bright":#f6c624,
-    "dark":#0F1133,
+    "primary":#2ebbc9,
+    "light":#dc4875,
+    "accent": #f8b640
+    "bright":#7e338e,
+    "dark":#251248,
     "darkest":#0F1133
 );
 
@@ -115,6 +116,9 @@ a {
 }
 .text-light{
     color: theme-color("light")
+}
+.text-accent{
+    color: theme-color("accent")
 }
 .text-bright{
     color: theme-color("bright")
