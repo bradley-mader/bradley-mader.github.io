@@ -25,6 +25,7 @@ position:relative;
 `
 
 const HiText = styled.div`
+    font-family: Georgia, Garamond;
     display:inline-block;
     @media (max-width: 550px){
         font-size: 55pt;
@@ -36,6 +37,7 @@ const HiText = styled.div`
     }
 `
 const InterludeText = styled.span`
+    font-family: Georgia, Garamond;
     display:inline-block;
     vertical-align: bottom;
     margin-left: 7%;
@@ -70,6 +72,7 @@ const LastNameText = styled.h1`
     }
 `
 const DescriptionText = styled.div`
+    font-family: Georgia, Garamond;
     font-size:20pt;
     @media (max-width: 550px){
         font-size: 18pt;
@@ -78,6 +81,13 @@ const DescriptionText = styled.div`
         font-size:16pt;
     }
 `
+
+const PsychSkillsImg = styled.div`
+    @media (max-width: 700px){
+        padding: 1em 0px 0px 0px;
+    }
+`
+
 export class Home extends Component {
     static displayName = Home.name;
 
@@ -95,13 +105,13 @@ export class Home extends Component {
         return (
             <Banner>
                 <ProfileContainer> 
-                    <HiText className='text-primary left-justified xxl-font'>Hi<span className='text-bright'>!</span></HiText>
-                    <InterludeText className='text-light left-justified m-font'>My name is</InterludeText>
-                    <FirstNameText className='text-bright xxl-font left-justified script-font'>Bradley</FirstNameText>
-                    <LastNameText className='text-bright xxl-font left-justified script-font'>Mader<span className='text-primary left-justified sans-serif-font xxl-font'>.</span></LastNameText>
-                    <DescriptionText className='text-light m-font left-justified'>I am a Backend Software Engineer with nearly 7 years of experience focused primarily on distributed applications.</DescriptionText>
+                    <HiText className='text-gradient-accent-to-bright left-justified xxl-font'>Hi!</HiText>
+                    <InterludeText className='text-gradient-light-to-bright left-justified m-font'>My name is</InterludeText>
+                    <FirstNameText className='text-gradient-accent-to-bright xxl-font left-justified script-font'>Bradley</FirstNameText>
+                    <LastNameText className='text-gradient-accent-to-bright xxl-font left-justified script-font'>Mader<span className='text-primary left-justified sans-serif-font xxl-font'>.</span></LastNameText>
+                    <DescriptionText className='text-gradient-light-to-bright m-font left-justified'>I am a Backend Software Engineer with nearly 7 years of experience focused primarily on distributed applications.</DescriptionText>
                 </ProfileContainer>
-                <div className='text-primary m-font center-justified' style={{width: "100%", padding:"2em 2em 0em 2em"}}><img src="./Psych_Skills.png" style={{width: "100%"}} alt="GO | Kubernetes | PostgresQL | AWS | Azure"/></div>
+                <PsychSkillsImg className='text-primary m-font center-justified' style={{width: "100%", padding:"2em 2em 0em 2em"}}><img src="./Psych_Skills.png" style={{width: "60%"}} alt="GO | Kubernetes | PostgresQL | AWS | Azure"/></PsychSkillsImg>
             </Banner>
         );
     }

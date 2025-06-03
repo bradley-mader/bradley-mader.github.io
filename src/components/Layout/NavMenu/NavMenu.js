@@ -72,22 +72,22 @@ export class NavMenu extends Component {
                 <Header>
                     <Navbar className="navbar-expand-sm navbar-toggleable-sm" light>
                         <NavbarBrand tag={Link} to="/">    
-                            <img src="logo192.png" alt="Bradley Mader"  tag={Link} to="/"/>
+                            <img src="logo192.png" alt="Bradley Mader" style={{position:"absolute", top:"0px"}} tag={Link} to="/"/>
                         </NavbarBrand>
                         <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-                        <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
+                        <Collapse className="d-sm-inline-flex flex-sm-row-reverse text-gradient-accent-to-bright" isOpen={!this.state.collapsed} navbar>
                             <ul className="navbar-nav flex-grow">
-                                <NavItem>
+                                <NavItem className="text-gradient-bright-to-light-hover">
                                     <NavLink tag={Link} to="/">
                                         <NavSelector>Home</NavSelector>
                                     </NavLink>
                                 </NavItem>
-                                <NavItem>
+                                <NavItem className="text-gradient-bright-to-light-hover">
                                     <NavLink tag={Link} to="/AboutMe">
                                         <NavSelector>About Me</NavSelector>
                                     </NavLink>
                                 </NavItem>
-                                <NavItem>
+                                <NavItem className="text-gradient-bright-to-light-hover">
                                     <NavLink tag={Link} to="/Resume">
                                         <NavSelector>Resume</NavSelector>
                                     </NavLink>

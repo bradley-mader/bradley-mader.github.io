@@ -1,10 +1,13 @@
+$navbar-padding-y: 1.5rem;
+
 $theme-colors:(
     "primary":#2ebbc9,
     "light":#dc4875,
     "accent": #f8b640,
     "bright":#7e338e,
     "dark":#251248,
-    "darkest":#0F1133
+    "darkest":#0F1133,
+    "white":#FFFFFF
 );
 
 $font-sizes:(
@@ -36,6 +39,9 @@ $font-sizes:(
 }
 .light-background{
     background-color: theme-color("light");
+}
+.white-background{
+    background-color: theme-color("white");
 }
 
 .dark-bg-on-hover:hover{
@@ -123,6 +129,41 @@ a {
 .text-bright{
     color: theme-color("bright")
 }
+.text-gradient-accent-to-bright {
+    color: theme-color("accent"); 
+    background-image: linear-gradient(0deg, theme-color("accent") , theme-color("bright")); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+.text-gradient-bright-to-light {
+    color: theme-color("accent"); 
+    background-image: linear-gradient(0deg, theme-color("accent") , theme-color("bright")); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+.text-gradient-bright-to-light-hover:hover {
+    color: theme-color("light"); 
+    background-image: linear-gradient(90deg, theme-color("bright"), theme-color("light"), theme-color("bright")); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+.text-gradient-light-to-bright {
+    color: theme-color("bright"); 
+    background-image: linear-gradient(90deg, theme-color("bright"), theme-color("light") , theme-color("bright")); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+.text-gradient-bright-to-dark{
+    color: theme-color("dark");
+    background-image: linear-gradient(90deg, theme-color("dark"), theme-color("bright") , theme-color("dark")); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
 
 .s-font{
     font-size: font-size("s");
@@ -151,9 +192,52 @@ a {
     font-family: Brush Script MT, Brush Script Std, cursive;
 }
 .sans-serif-font{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Georgia, Garamond;
 }
 
 .pointer-cursor{
     cursor:pointer;
+}
+
+.smooth_corners{
+    border-radius: 10px;
+}
+.left-smooth{
+    border-radius: 10px 0px 0px 10px;
+}
+.right-smooth{
+    border-radius: 0px 10px 10px 0px;
+}
+
+.half-width{
+    width: 50%;
+}
+.full-width{
+    width:100%;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.no-overflow{
+    overflow: hidden;
+}
+
+.small-pad-top{
+    padding-top: 2em;
+}
+.small-pad-bottom{
+    padding-bottom: 2em;
+}
+
+.large-shift-up{
+    margin-top: -8em;
+}
+
+.small-margin-top{
+    margin-top:2em;
+}
+.large-margin-top{
+    margin-top:4em;
 }
