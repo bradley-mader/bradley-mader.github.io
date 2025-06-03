@@ -105,27 +105,51 @@ export class AboutMe extends Component {
                         </div>
                     </FamilyBanner>
                     <FamilyBanner>
-                        <div className='fb-image inline-block full-width large-margin-top text-left-justified'>
-                            <img src='Professional_History.jpg' alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>     
-                        </div>
-                        <div className='fb-content white-background'>
-                            <div className="full-width text-centered">
-                                <img src='https://bradley-mader.github.io/EA_logo_black.png' alt='EA Logo' style={{width:'25%', padding: '10px'}}/>
-                                <img src='https://bradley-mader.github.io/fb_logo.png' alt='Frostbite Logo' style={{width:'25%', padding: '10px'}}/>
+                        <div className='fb-content white-background xlarge-margin-top'>
+                            <div className='fb-image inline-block large-shift-up half-width text-centered full-width half-x-padding'>
+                                <img src='Professional_History.png'  className="large-shift-up" alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>     
                             </div>
-                            <div style={{padding:'1em 0em 0em 0em', width: '100%', display: 'inline-block'}}>
-                                Software Engineer for Electronic Arts working on Frostbite Engine Integrations for the Dice studio since Summer 2022.
+                            <div className="full-width text-centered white-background">
+                                <img src='EA_logo_black.png' alt='EA Logo' style={{width:'30%', padding: '10px'}}/>
+                            </div>
+                            <div className="white-background" style={{padding:'1em 0em 0em 0em', width: '100%', display: 'inline-block'}}>
+                                <b>Software Engineer</b> for <b>Electronic Arts</b> working on Frostbite Engine Integrations and <b>Large Scale Distributed Systems</b>.
                                 <ul className='fb-text-small'>
-                                    <li>Maintain and troubleshoot CI pipelines reducing the iteration time between mainline engine features and game development lines.</li>
+                                    <li>Drove key decisions for massive distributed cloud event streaming service intended for millions of users with minimal latency.</li>
+                                    <li>Led load testing and optimized distributed Go application hosted on AWS from inception (maximum capacity of approximately 100k users) through 2.6M users.</li>
+                                    <li>Increased memory performance of custom load testing image from max of 2k users per 6GiB replica to 15k users per 4GiB replica resulting in 10x drop in cluster resources.</li>
+                                    <li>Analyzed and compared distributed database options between AWS Aurora and Yugabyte solutions with performance comparisons. Developed indexes and worked on data sharding optimizations specific to both platforms.</li>
+                                    <li>Enhanced and analyzed metrics and logging for large-scale distributed applications. Built additional Grafana visualizations to assist with future diagnostics.</li>
+                                    <li>Informed key performance decisions related to asynchronous behaviors, database architecture and scale, kubernetes configurations and scale, and optimization of grpc calls and Golang contexts.</li>
+                                    <li>Built out tooling within CLI to easily test and log performance and execute common functionalities within distributed applications.</li>
+                                    <li>Proposed, designed and provided tooling solutions in C ++ and C# WPF for design and engineering workflows to improve partner team satisfaction.</li>
+                                    <li>Maintained Jenkins code and data pipelines to provide status of builds and perform automatic code migrations between development lines.</li>
                                     <li>Work with management to improve processes surrounding integration of new releases and remove obstacles to implementation and development of new features.</li>
+                                    <li>Mentored new and existing employees by educating on how to contribute to game team projects, navigate complex development line configurations in Perforce.</li>
                                 </ul>
                             </div>
-                            <div className="full-width text-centered">
+                            <div className="full-width text-centered white-background">
                                 <img src='becu_logo.png' alt='BECU Logo' style={{width:'40%', padding: '10px'}}/>
                             </div>
-                            <div style={{padding:'1em 0em 0em 0em', width: '100%', display: 'inline-block'}}>
-                                Software Developer building Full Stack applications with a focus on security and reliability. Led formation of team to implement Customer Relationship Management platform, adoption of cloud
-                                native technologies including prototyping new design patterns and creating Azure prototypes for Azure Functions, Azure Kubernetes Service and Docker hosted REST Services.
+                            <div className="white-background" style={{padding:'1em 0em 0em 0em', width: '100%', display: 'inline-block'}}>
+                                <b>Software Developer</b> building <b>full-stack</b> applications with a focus on security and reliability.
+                                <ul>
+                                    <li>Retired existing legacy CRM application with successful replacement or enhancement of user workflows
+                                    and legacy backend services.</li>
+                                    <li>Onboarded PEGA to BECU and worked with a small cross-discipline team to conceptualize the
+                                    application MVP , propose and defend architectural patterns for secure data access from external
+                                    applications, and implement necessary front and backend systems to prove viability.</li>
+                                    <li>Engineered scalable and high volume C# .NET REST APIs sourcing data from multiple backend systems
+                                    in a high security environment.</li>
+                                    <li>Worked to rigorously define best practices with regard to development processes and work onboarding.</li>
+                                    <li>Developed and automated UI testing suite for Pega platform application.</li>
+                                    <li>Proposed and prototyped Azure cloud native solutions for API Proxies, Docker container deployments,
+                                    and API Stubs for larger adoption by the organization.</li>
+                                    <li>Drove quality and security through application of robust Code Review process for Pega, Backend C#
+                                    .Net APIs, and SQL Packages.</li>
+                                    <li>Diagnosed and triaged production issues using Azure analytics and alerts, Splunk logs and Pega
+                                    platform logging and diagnostics.</li>
+                                </ul>
                                 <ul className='fb-text-small'>
                                     
                                 </ul>
