@@ -1,7 +1,3 @@
-
-$--bs-body-bg: #0F1133;
-
-$body-bg: #0F1133;
 $theme-colors:(
     "primary":#f69000,
     "light":#53b1b1,
@@ -9,6 +5,11 @@ $theme-colors:(
     "dark":#0F1133,
     "darkest":#0F1133
 );
+
+$--bs-body-bg: theme-color("dark");
+
+$body-bg: theme-color("dark");
+
 $font-sizes:(
     "s":12pt,
     "m":24pt,
