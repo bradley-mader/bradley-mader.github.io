@@ -76,6 +76,11 @@ $font-sizes:(
 .text-centered{
     text-align: center;
 }
+.text-left-justified{
+    text-align: left;
+}
+
+
 .underline-on-hover:hover{
     text-decoration: underline;
 }
@@ -233,6 +238,34 @@ a {
 }
 .small-pad-bottom{
     padding-bottom: 2em;
+}
+.small-x-padding{
+    padding-left:2em;
+    padding-right:2em;
+}
+.med-x-padding{
+    padding-left: 4em;
+    padding-right: 4em;
+}
+.quarter-x-padding{
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+}
+.half-x-padding{
+    padding-left: 25%;
+    padding-right: 25%;
+}
+.diminishing-x-padding{
+    @extend .half-x-padding;
+    
+    @media (max-width: 990px) {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    @media (max-width: 550px) {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
 }
 
 .large-shift-up{
