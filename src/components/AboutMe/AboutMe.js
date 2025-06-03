@@ -138,8 +138,8 @@ export class AboutMe extends Component {
                         </div>
                         <div className='fb-content white-background side-to-stackable'>
                             <div className='fb-content-small'>
-                                I attended college at Washington State University to earn my Bacchelors of Science in Biology. After several years in the workforce, I fell 
-                                in love with Software Engineering which led me to return to school at Oregon State University where I attained a second Bacchelors of Science in 
+                                I attended college at Washington State University to earn my Bachelors of Science in Biology. After several years in the workforce, I fell 
+                                in love with Software Engineering which led me to return to school at Oregon State University where I attained a second Bachelors of Science in 
                                 Computer Science in 2016.
                             </div>
                         </div>
