@@ -95,7 +95,7 @@ export class AboutMe extends Component {
                         <img className='fb-image' src='fam_foto.jpeg' onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)} alt=""/>
                     </FamilyBannerPhoto>
                     <FamilyBanner>
-                        <div className='fb-image half-width'>
+                        <div className='fb-image half-width small-pad' style={{position:"relative", left:"25%"}}>
                             <img src='Washington.jpg' className='smooth_corners' onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)} alt=""/>
                         </div>
                         <div className='fb-content white-background'>
