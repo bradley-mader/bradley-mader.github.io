@@ -105,7 +105,7 @@ export class AboutMe extends Component {
                         </div>
                     </FamilyBanner>
                     <FamilyBanner>
-                        <div className='fb-content white-background xlarge-margin-top'>
+                        <div className='fb-content white-background xxlarge-margin-top'>
                             <div className='fb-image inline-block large-shift-up half-width text-centered full-width half-x-padding'>
                                 <img src='Professional_History.png'  className="large-shift-up" alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>     
                             </div>
