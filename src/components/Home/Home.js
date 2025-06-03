@@ -101,8 +101,7 @@ export class Home extends Component {
                     <LastNameText className='text-bright xxl-font left-justified script-font'>Mader<span className='text-primary left-justified sans-serif-font xxl-font'>.</span></LastNameText>
                     <DescriptionText className='text-light m-font left-justified'>I am a Backend Software Engineer with nearly 7 years of experience focused primarily on distributed applications.</DescriptionText>
                 </ProfileContainer>
-
-                <div className='text-primary m-font center-justified' style={{width: "100%", padding:"2em"}}><img src="./Psych_Skills.png" style={{width: "100%"}} alt="GO | Kubernetes | PostgresQL | AWS | Azure"/></div>
+                <div className='text-primary m-font center-justified' style={{width: "100%", padding:"2em 2em 0em 2em"}}><img src="./Psych_Skills.png" style={{width: "100%"}} alt="GO | Kubernetes | PostgresQL | AWS | Azure"/></div>
             </Banner>
         );
     }
