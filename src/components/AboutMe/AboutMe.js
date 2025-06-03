@@ -104,9 +104,9 @@ export class AboutMe extends Component {
                         </div>
                     </FamilyBanner>
                     <FamilyBanner>
-                        <div className='fb-content white-background large-margin-top'>
+                        <div className='fb-content white-background xlarge-margin-top'>
                             <div className='fb-image inline-block large-shift-up half-width'>
-                                <img src='Professional_Synopsis.png' alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>     
+                                <img src='Professional_Synopsis.png' className="large-shift-up" alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>     
                             </div>
                             <div>
                                 I have spent the past 6 years developing applications both web based and native. In that time, I have advanced initiatives to 
