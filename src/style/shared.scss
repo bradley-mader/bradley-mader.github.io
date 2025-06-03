@@ -32,10 +32,23 @@ body {
     }
   }
 
-  .side-to-stackable{
+  .side-to-stackable > *{
     display:inline-block;
     width:50%;
-    @media (max-width: 400px){
+    @media (max-width: 650px){
       width:100%
+    }
+  }
+
+  .side-to-stackable{
+    @media (max-width: 650px){
+      width: 75%;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+    @media (max-width: 400px){
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0%;
     }
   }

@@ -132,11 +132,11 @@ export class AboutMe extends Component {
                             </div>
                         </div>
                     </FamilyBanner>
-                    <FamilyBanner className='smooth_corners no-overflow white-background' style={{marginTop:"2em"}}>
-                        <div className='fb-image side-to-stackable'>
+                    <FamilyBanner className='smooth_corners no-overflow white-background side-to-stackable' style={{marginTop:"2em"}}>
+                        <div className='fb-image'>
                             <img src='Education.jpg' alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>     
                         </div>
-                        <div className='fb-content white-background side-to-stackable'>
+                        <div className='fb-content white-background'>
                             <div className='fb-content-small'>
                                 I attended college at Washington State University to earn my Bachelors of Science in Biology. After several years in the workforce, I fell 
                                 in love with Software Engineering which led me to return to school at Oregon State University where I attained a second Bachelors of Science in 
