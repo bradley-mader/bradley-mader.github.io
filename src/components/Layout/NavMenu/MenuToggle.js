@@ -5,10 +5,6 @@ import "./MenuToggle.scss"
 export default class MenuToggle extends Component {
     static displayName = MenuToggle.name;
 
-    constructor (props) {
-        super(props);
-    }
-
     render () {
         return (
             <label>
