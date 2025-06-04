@@ -90,10 +90,10 @@ export class AboutMe extends Component {
                         <img src='Washington.jpg' className='full-width' onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)} alt=""/>
                     </div>
                     <FamilyBanner className='text-centered white-background smooth_corners small-pad'>
-                        <div className='fb-content text-left-justified white-background smooth_corners'>
-                            <b><p>I live in Snohomish, WA with my wife, three children, dog, and cat where I spend the vast majority of my time 
+                        <div className='text-left-justified white-background smooth_corners small-pad-bottom'>
+                            <p>I live in Snohomish, WA with my wife, three children, dog, and cat where I spend the vast majority of my time 
                             chasing the little animals around.</p>
-                            <p>When I'm not doing that, my hobbies include: </p></b>
+                            <p>When I'm not doing that, my hobbies include: </p>
                         </div>
                         <p><PairImage src='running_text.png' alt=""/><PairImage className="" src="runner.png" alt=""/></p>
                         <p><PairImage src="vg_controller.png" alt=""/><PairImage src="gaming_text.png" alt=""/></p>
