@@ -2,8 +2,6 @@ import React, { useRef, useEffect } from 'react';
 
 import styled from 'styled-components';
 
-import {useReactToPrint} from 'react-to-print'
-
 import "./Resume.css";
 
 const PrintContainer = styled.iframe`
