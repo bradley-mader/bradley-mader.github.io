@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import styled from 'styled-components';
+
+import {useReactToPrint} from 'react-to-print'
 
 import "./Resume.css";
 
@@ -8,7 +10,7 @@ const PrintContainer = styled.iframe`
   position:relative;
   left:50%;
   width:8.5in;
-  height:23in;
+  height:22.6in;
   backdround:transparent;
   transform:translate(-50%, 0%);
   border-radius: 1em;
@@ -21,20 +23,35 @@ const PrintContainer = styled.iframe`
   @media print{
     display: block;
     position:fixed;
-    width:100%;
+    left:0px;
+    top:0px;
+    width:8.5in;
+    height:22in;
     margin:none;
     border-radius:none;
   }
 `
 
-export class Resume extends Component {
-  static displayName = Resume.name;
+export const Resume = () => {
+  const iframeRef = useRef();
 
-  render() {
-    return (
-        <div>
-          <PrintContainer src='./Resume.pdf'/>
-        </div>
-    );
-  }
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if ((event.ctrlKey || event.metaKey) && event.key === 'p') {
+        event.preventDefault();
+        iframeRef.current.contentWindow.print();      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  });
+
+  return (
+      <div>
+        <PrintContainer src='./Resume.pdf'  ref={iframeRef}/>
+      </div>
+  );
 }
