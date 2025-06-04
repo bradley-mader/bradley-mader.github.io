@@ -70,7 +70,7 @@ export class AboutMe extends Component {
                 {
                     this.state.unloaded > 0 &&
                     <div className="loading_symbol" style={{ width: '100px', margin: 'auto' }}>
-                        <HashLoader color="#52bfd9" size={50}/>
+                        <HashLoader color="#dc4875" size={50}/>
                     </div>
                 }
                 <FamilyContainer className='dark-text' style={{display: this.state.unloaded <= 0 ? 'block' : 'none'}}>
