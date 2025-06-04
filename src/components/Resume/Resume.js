@@ -11,9 +11,9 @@ const PrintContainer = styled.iframe`
   height:23in;
   backdround:transparent;
   transform:translate(-50%, 0%);
-  overflow:none;
   border-radius: 1em;
-  @media (max-width: 900px){
+  overflow: scroll;
+  @media (max-width: 8.5in){
       width:100%;
       height: 90vh;
       padding:1vh;
