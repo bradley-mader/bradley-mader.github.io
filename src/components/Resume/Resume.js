@@ -13,6 +13,11 @@ const PrintContainer = styled.iframe`
   transform:translate(-50%, 0%);
   overflow:none;
   border-radius: 1em;
+  @media (max-width: 900px){
+      width:100%;
+      height: 90vh;
+      padding:1vh;
+  }
   @media print{
     display: block;
     position:fixed;
