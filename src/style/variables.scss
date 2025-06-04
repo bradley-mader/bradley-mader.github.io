@@ -3,7 +3,9 @@ $navbar-padding-y: 0rem;
 $theme-colors:(
     "primary":#2ebbc9,
     "light":#dc4875,
+    "lightshift":#bc5885,
     "accent": #f8b640,
+    "accentshift":#fad862,
     "bright":#7e338e,
     "dark":#251248,
     "darkest":#0F1133,
@@ -129,11 +131,17 @@ a {
     color: theme-color("light")
 }
 .text-accent{
+    
     color: theme-color("accent")
 }
 .text-bright{
     color: theme-color("bright")
 }
+
+.text-bold{
+    font-weight: bold;
+}
+
 .text-gradient-accent-to-bright {
     color: theme-color("accent"); 
     background-image: linear-gradient(0deg, theme-color("accent") , theme-color("bright")); 
@@ -141,9 +149,37 @@ a {
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
 }
+.text-gradient-darkest-to-bright {
+    color: theme-color("accent"); 
+    background-image: linear-gradient(30deg, theme-color("darkest") , theme-color("bright")); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+.text-gradient-accent {
+    color: theme-color("accent"); 
+    background-image: linear-gradient(45deg, theme-color("accentshift") , theme-color("accent")); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+.text-gradient-light {
+    color: theme-color("accent"); 
+    background-image: linear-gradient(45deg, theme-color("lightshift") , theme-color("light")); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
 .text-gradient-bright-to-light {
     color: theme-color("accent"); 
     background-image: linear-gradient(0deg, theme-color("accent") , theme-color("bright")); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+.text-gradient-light-to-accent {
+    color: theme-color("accent"); 
+    background-image: linear-gradient(30deg, theme-color("light") , theme-color("accent")); 
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 

@@ -10,7 +10,7 @@ const FamilyContainer = styled.div`
 const FamilyBanner = styled.div`
     font-family: Georgia, garamond;
     font-size: 22pt;
-    margin: 0vw -4vw 0vw -4vw;
+    margin: 0vw 0vw 0vw 0vw;
     @media (max-width: 1300px){
         font-size: 22pt;
     }
@@ -35,7 +35,7 @@ const FamilyBanner = styled.div`
     
     }
     
-    & * img{
+    & * .title-banner-image{
         width:100%;
     }
 `
@@ -43,6 +43,16 @@ const FamilyBanner = styled.div`
 const FamilyBannerPhoto = styled.div`
     & img{
         width:100%;
+    }
+`
+
+const PairImage = styled.img`
+    position:relative;
+    height:256px;
+    width:256px;
+    @media (max-width: 650px){
+        height: 128px;
+        width: 128px;
     }
 `
 
@@ -65,7 +75,7 @@ export class AboutMe extends Component {
 
     render(){
         return (
-            <div>
+            <div className='darkest-text'>
                 {
                     this.state.unloaded > 0 &&
                     <div className="loading_symbol" style={{ width: '100px', margin: 'auto' }}>
@@ -76,25 +86,25 @@ export class AboutMe extends Component {
                         <img className='fb-image' src='fam_foto.jpeg' onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)} alt=""/>
                     </FamilyBannerPhoto>
                 <FamilyContainer className='dark-text' style={{display: this.state.unloaded <= 0 ? 'block' : 'none'}}>
-                    <FamilyBanner className='text-centered'>
-                        <div className='fb-image half-width small-pad' style={{marginLeft:"25%"}}>
-                            <img src='Washington.jpg' className='smooth_corners' onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)} alt=""/>
-                        </div>
-                        <div className='fb-content white-background'>
-                            <p>I live in Snohomish, WA with my wife, three children, dog, and cat where I spend the vast majority of my time 
+                    <div className='fb-image half-width small-pad' style={{marginLeft:"25%"}}>
+                        <img src='Washington.jpg' className='full-width' onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)} alt=""/>
+                    </div>
+                    <FamilyBanner className='text-centered white-background smooth_corners small-pad'>
+                        <div className='fb-content text-left-justified white-background smooth_corners'>
+                            <b><p>I live in Snohomish, WA with my wife, three children, dog, and cat where I spend the vast majority of my time 
                             chasing the little animals around.</p>
-                            <p>When I'm not doing that, my hobbies include: </p>
+                            <p>When I'm not doing that, my hobbies include: </p></b>
                         </div>
-                        <p><img src='running_text.png' alt="" style={{height:"256px", width:"256px"}}></img><img className="" src="runner.png" alt="" style={{height:"256px", width:"256px"}}/></p>
-                        <p><img src="vg_controller.png" alt="" style={{height:"256px", width:"256px"}}/><img src="gaming_text.png" alt="" style={{height:"256px", width:"256px"}}/></p>
-                        <p><img src="cooking_text.png" alt="" style={{height:"256px", width:"256px"}}/><img src="Cooking.png" alt="" style={{height:"256px", width:"256px"}}/></p>
+                        <p><PairImage src='running_text.png' alt=""/><PairImage className="" src="runner.png" alt=""/></p>
+                        <p><PairImage src="vg_controller.png" alt=""/><PairImage src="gaming_text.png" alt=""/></p>
+                        <p><PairImage src="cooking_text.png" alt=""/><PairImage src="Cooking.png" alt=""/></p>
                     </FamilyBanner>
                     <FamilyBanner>
-                        <div className='fb-content white-background xlarge-margin-top'>
+                        <div className='fb-content white-background smooth_corners xlarge-margin-top'>
                             <div className='fb-image inline-block large-shift-up half-width text-centered full-width half-x-padding'>
-                                <img src='Professional_Synopsis.png' className="large-shift-up" alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>     
+                                <img src='Professional_Synopsis.png' className="large-shift-up full-width" alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>     
                             </div>
-                            <div>
+                            <div >
                                 I have spent the past 6 years developing applications both web based and native. In that time, I have advanced initiatives to 
                                 move to cloud native architectures, automated testing, decommissioned legacy software systems, and improved UX of applications and 
                                 workflows. Before that I spent 3 years working in data analytics including development of ETL pipelines, governing code quality and 
@@ -108,14 +118,14 @@ export class AboutMe extends Component {
                         </div>
                     </FamilyBanner>
                     <FamilyBanner>
-                        <div className='fb-content white-background xxlarge-margin-top'>
-                            <div className='fb-image inline-block large-shift-up half-width text-centered full-width half-x-padding'>
-                                <img src='Professional_History.png'  className="large-shift-up" alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>     
+                        <div className='fb-content white-background xxlarge-margin-top smooth_corners'>
+                            <div className='inline-block large-shift-up half-width text-centered full-width half-x-padding'>
+                                <img src='Professional_History.png'  className="large-shift-up full-width" alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>     
                             </div>
                             <div className="full-width text-centered white-background">
                                 <img src='EA_logo_black.png' alt='EA Logo' onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)} style={{width:'30%', padding: '10px'}}/>
                             </div>
-                            <div className="white-background" style={{padding:'1em 0em 0em 0em', width: '100%', display: 'inline-block'}}>
+                            <div style={{padding:'1em 0em 0em 0em', width: '100%', display: 'inline-block'}}>
                                 <b>Software Engineer</b> for <b>Electronic Arts</b> working on Frostbite Engine Integrations and <b>Large Scale Distributed Systems</b>.
                                 <ul className='fb-text-small'>
                                     <li>Drove key decisions for massive distributed cloud event streaming service intended for millions of users with minimal latency.</li>
@@ -134,7 +144,7 @@ export class AboutMe extends Component {
                             <div className="full-width text-centered white-background">
                                 <img src='becu_logo.png' alt='BECU Logo' onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)} style={{width:'40%', padding: '10px'}}/>
                             </div>
-                            <div className="white-background" style={{padding:'1em 0em 0em 0em', width: '100%', display: 'inline-block'}}>
+                            <div style={{padding:'1em 0em 0em 0em', width: '100%', display: 'inline-block'}}>
                                 <b>Software Developer</b> building <b>full-stack</b> applications with a focus on security and reliability.
                                 <ul>
                                     <li>Retired existing legacy CRM application with successful replacement or enhancement of user workflows
@@ -161,7 +171,7 @@ export class AboutMe extends Component {
                     </FamilyBanner>
                     <FamilyBanner className='smooth_corners no-overflow white-background side-to-stackable' style={{marginTop:"2em"}}>
                         <div className='fb-image'>
-                            <img src='Education.jpg' alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>     
+                            <img className="full-width" src='Education.jpg' alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>     
                         </div>
                         <div className='fb-content white-background'>
                             <div className='fb-content-small'>
