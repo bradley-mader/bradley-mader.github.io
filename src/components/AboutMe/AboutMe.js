@@ -53,7 +53,7 @@ export class AboutMe extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            unloaded: 3,
+            unloaded: 7,
         }
     }
 
@@ -110,7 +110,7 @@ export class AboutMe extends Component {
                                 <img src='Professional_History.png'  className="large-shift-up" alt="" onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)}/>     
                             </div>
                             <div className="full-width text-centered white-background">
-                                <img src='EA_logo_black.png' alt='EA Logo' style={{width:'30%', padding: '10px'}}/>
+                                <img src='EA_logo_black.png' alt='EA Logo' onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)} style={{width:'30%', padding: '10px'}}/>
                             </div>
                             <div className="white-background" style={{padding:'1em 0em 0em 0em', width: '100%', display: 'inline-block'}}>
                                 <b>Software Engineer</b> for <b>Electronic Arts</b> working on Frostbite Engine Integrations and <b>Large Scale Distributed Systems</b>.
@@ -129,7 +129,7 @@ export class AboutMe extends Component {
                                 </ul>
                             </div>
                             <div className="full-width text-centered white-background">
-                                <img src='becu_logo.png' alt='BECU Logo' style={{width:'40%', padding: '10px'}}/>
+                                <img src='becu_logo.png' alt='BECU Logo' onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)} style={{width:'40%', padding: '10px'}}/>
                             </div>
                             <div className="white-background" style={{padding:'1em 0em 0em 0em', width: '100%', display: 'inline-block'}}>
                                 <b>Software Developer</b> building <b>full-stack</b> applications with a focus on security and reliability.
