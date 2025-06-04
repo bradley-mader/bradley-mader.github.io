@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
+import MenuToggle from './MenuToggle'
+
 import './NavMenu.scss'
 
 const Header = styled.div`
@@ -74,7 +76,9 @@ export class NavMenu extends Component {
                         <NavbarBrand tag={Link} to="/">    
                             <img src="logo192.png" alt="Bradley Mader" style={{position:"absolute", top:"0px"}} tag={Link} to="/"/>
                         </NavbarBrand>
-                        <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+                        <NavbarToggler onClick={this.toggleNavbar} className="mr-2">
+                            <MenuToggle></MenuToggle>
+                        </NavbarToggler>
                         <Collapse className="d-sm-inline-flex flex-sm-row-reverse text-gradient-accent-to-bright" isOpen={!this.state.collapsed} navbar>
                             <ul className="navbar-nav flex-grow">
                                 <NavItem className="text-gradient-bright-to-light-hover">
