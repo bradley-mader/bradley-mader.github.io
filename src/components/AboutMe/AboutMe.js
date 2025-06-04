@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import HashLoader from 'react-spinners/HashLoader';
 
 const FamilyContainer = styled.div`
-    border-radius: 4px;
-    margin: 1vw;
+    margin: 4vw;
     overflow: hidden;
 `
 
 const FamilyBanner = styled.div`
     font-family: Georgia, garamond;
     font-size: 22pt;
+    margin: 0vw -4vw 0vw -4vw;
     @media (max-width: 1300px){
         font-size: 22pt;
     }
@@ -41,7 +41,6 @@ const FamilyBanner = styled.div`
 `
 
 const FamilyBannerPhoto = styled.div`
-    padding: 0vw 0vw 2vw 0vw;
     & img{
         width:100%;
     }
@@ -73,18 +72,22 @@ export class AboutMe extends Component {
                         <HashLoader color="#dc4875" size={50}/>
                     </div>
                 }
-                <FamilyContainer className='dark-text' style={{display: this.state.unloaded <= 0 ? 'block' : 'none'}}>
-                    <FamilyBannerPhoto>
+                <FamilyBannerPhoto className='banner-top-offset'>
                         <img className='fb-image' src='fam_foto.jpeg' onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)} alt=""/>
                     </FamilyBannerPhoto>
-                    <FamilyBanner>
-                        <div className='fb-image half-width small-pad' style={{position:"relative", left:"25%"}}>
+                <FamilyContainer className='dark-text' style={{display: this.state.unloaded <= 0 ? 'block' : 'none'}}>
+                    <FamilyBanner className='text-centered'>
+                        <div className='fb-image half-width small-pad' style={{marginLeft:"25%"}}>
                             <img src='Washington.jpg' className='smooth_corners' onLoadStart={this.incrementUnloadedImgs.bind(this)} onLoad={this.decrementUnloadedImgs.bind(this)} alt=""/>
                         </div>
                         <div className='fb-content white-background'>
                             <p>I live in Snohomish, WA with my wife, three children, dog, and cat where I spend the vast majority of my time 
-                            chasing the little animals around. I am a huge runner, gamer and cook.</p>
+                            chasing the little animals around.</p>
+                            <p>When I'm not doing that, my hobbies include: </p>
                         </div>
+                        <p><img src='running_text.png' alt="" style={{height:"256px", width:"256px"}}></img><img className="" src="runner.png" alt="" style={{height:"256px", width:"256px"}}/></p>
+                        <p><img src="vg_controller.png" alt="" style={{height:"256px", width:"256px"}}/><img src="gaming_text.png" alt="" style={{height:"256px", width:"256px"}}/></p>
+                        <p><img src="cooking_text.png" alt="" style={{height:"256px", width:"256px"}}/><img src="Cooking.png" alt="" style={{height:"256px", width:"256px"}}/></p>
                     </FamilyBanner>
                     <FamilyBanner>
                         <div className='fb-content white-background xlarge-margin-top'>

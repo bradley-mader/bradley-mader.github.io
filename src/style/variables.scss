@@ -1,4 +1,4 @@
-$navbar-padding-y: 1.5rem;
+$navbar-padding-y: 0rem;
 
 $theme-colors:(
     "primary":#2ebbc9,
@@ -213,6 +213,12 @@ a {
 .right-smooth{
     border-radius: 0px 10px 10px 0px;
 }
+.top-smooth{
+    border-radius: 10px 10px 0px 0px;
+}
+.bottom-smooth{
+    border-radius: 0px 0px 10px 10px;
+}
 
 .half-width{
     width: 50%;
@@ -243,6 +249,11 @@ a {
     padding-left:2em;
     padding-right:2em;
 }
+
+.med-pad-top{
+    padding-top: 4em;
+}
+
 .med-x-padding{
     padding-left: 4em;
     padding-right: 4em;
@@ -283,4 +294,23 @@ a {
 }
 .xxlarge-margin-top{
     margin-top:10em;
+}
+.small-margin-left{
+    margin-left:2em;
+}
+.med-margin-left{
+    margin-left:4em;
+}
+.large-margin-left{
+    margin-left:6em;
+}
+.xlarge-margin-left{
+    margin-left:8em;
+}
+.xxlarge-margin-left{
+    margin-left:10em;
+}
+
+.banner-top-offset{
+    margin-top:55px;
 }
