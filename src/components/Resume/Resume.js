@@ -33,7 +33,7 @@ export class Resume extends Component {
   render() {
     return (
         <div>
-          <PrintContainer src='./Resume.pdf'/>
+          <PrintContainer src='./Resume.pdf/default/connect.pdf'/>
         </div>
     );
   }
