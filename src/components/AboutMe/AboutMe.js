@@ -10,15 +10,14 @@ const FamilyContainer = styled.div`
 const FamilyBanner = styled.div`
     font-family: Georgia, garamond;
     font-size: 22pt;
-    margin: 0vw 0vw 0vw 0vw;
     @media (max-width: 1300px){
-        font-size: 22pt;
-    }
-    @media (max-width: 1100px){
         font-size: 18pt;
     }
+    @media (max-width: 1100px){
+        font-size: 16pt;
+    }
     @media (max-width: 900px){
-        font-size: 14pt;
+        font-size: 12.5pt;
     }
     @media (max-width: 700px){
         font-size: 12pt;

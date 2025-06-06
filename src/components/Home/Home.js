@@ -103,7 +103,7 @@ export class Home extends Component {
 
     render() {
         return (
-            <Banner>
+            <Banner className='banner-top-offset'>
                 <ProfileContainer> 
                     <HiText className='text-gradient-accent-to-bright left-justified xxl-font'>Hi!</HiText>
                     <InterludeText className='text-gradient-light-to-bright left-justified m-font'>My name is</InterludeText>
