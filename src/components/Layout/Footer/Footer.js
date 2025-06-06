@@ -26,8 +26,6 @@ export const Footer = () =>
                 <td>
                     <a href="https://twitter.com/BMMader" target="_blank" rel="noreferrer"><ContactChannelIcon src="twitter.svg" className='dark-bg-on-hover'></ContactChannelIcon></a>
                 </td><td>
-                    <a href="https://bmader23.itch.io" target="_blank" rel="noreferrer"><ContactChannelIcon src="itchio.svg" className='dark-bg-on-hover'></ContactChannelIcon></a>
-                </td><td>
                     <a href="https://medium.com/@mader.bradley" target="_blank" rel="noreferrer"><ContactChannelIcon src="medium.png" className='dark-bg-on-hover'></ContactChannelIcon></a>
                 </td><td>
                     <a href="mailto:mader.bradley@gmail.com" target="_blank" rel="noreferrer"><ContactChannelIcon src="email_logo.png" className='dark-bg-on-hover'></ContactChannelIcon></a>
