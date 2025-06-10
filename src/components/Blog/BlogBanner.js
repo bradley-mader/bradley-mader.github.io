@@ -44,13 +44,12 @@ const BlogBanner = () => {
         const title = item.querySelector('title')?.textContent || 'Untitled';
         const link = item.querySelector('link')?.textContent || '';
         const pubDate = item.querySelector('pubDate')?.textContent || '';
-        const description = item.querySelector('description')?.textContent || '';
         const creator = item.querySelector('creator')?.textContent || 'Mader.bradley';
         const content = item.querySelector('encoded')?.textContent;
         
         // Extract plain text from HTML description
         const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = description;
+        tempDiv.innerHTML = content;
         const plainText = tempDiv.textContent || tempDiv.innerText || '';
 
         // Extract image from description if available
@@ -65,7 +64,7 @@ const BlogBanner = () => {
           description: plainText.substring(0, 250) + '...',
           creator,
           imageUrl,
-          readingTime: Math.ceil(plainText.length / 200) // Rough estimate
+          readingTime: Math.ceil(plainText.length / (265 * 6)) // Rough estimate
         }
         return result;
       });
