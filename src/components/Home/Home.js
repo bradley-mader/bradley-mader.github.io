@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import BlogBanner from '../Blog/BlogBanner';
 
 const Banner = styled.div`
     position: relative;
@@ -114,6 +115,7 @@ export class Home extends Component {
                 <PsychSkillsImg className='text-primary m-font center-justified full-width small-pad-top'>
                     <img src="./Psych_Skills.png" className="full-width diminishing-x-padding" alt="GO | Kubernetes | PostgresQL | AWS | Azure"/>
                 </PsychSkillsImg>
+                <BlogBanner/>
             </Banner>
         );
     }
