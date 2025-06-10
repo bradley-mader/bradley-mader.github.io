@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, ExternalLink, Clock, Calendar, User, RefreshCw } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Clock, Calendar, User, RefreshCw } from 'lucide-react';
 
 const BlogBanner = () => {
   const [articles, setArticles] = useState([]);
@@ -182,69 +182,64 @@ const BlogBanner = () => {
             {/* Carousel Item */}
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <div className="card shadow-lg border-0">
-                  {/* Article Image */}
-                  {currentArticle.imageUrl && (
-                    <div className="position-relative" style={{height: '250px', overflow: 'hidden'}}>
-                      <img
-                        src={currentArticle.imageUrl}
-                        className="card-img-top w-100 h-100"
-                        alt={currentArticle.title}
-                        style={{objectFit: 'cover'}}
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                        }}
-                      />
-                      <div 
-                        className="position-absolute bottom-0 start-0 w-100" 
-                        style={{
-                          background: 'linear-gradient(transparent, rgba(0,0,0,0.6))',
-                          height: '100px'
-                        }}
-                      ></div>
-                    </div>
-                  )}
-                  
-                  {/* Article Content */}
-                  <div className="card-body p-4">
-                    {/* Article Meta */}
-                    <div className="d-flex flex-wrap align-items-center text-muted small mb-3">
-                      <div className="d-flex align-items-center me-3 mb-1">
-                        <User size={16} className="me-1" />
-                        <span>{currentArticle.creator}</span>
-                      </div>
-                      <div className="d-flex align-items-center me-3 mb-1">
-                        <Calendar size={16} className="me-1" />
-                        <span>{formatDate(currentArticle.pubDate)}</span>
-                      </div>
-                      <div className="d-flex align-items-center mb-1">
-                        <Clock size={16} className="me-1" />
-                        <span>{currentArticle.readingTime} min read</span>
-                      </div>
-                    </div>
-
-                    {/* Article Title */}
-                    <h2 className="card-title h3 fw-bold text-dark mb-3">
-                      {currentArticle.title}
-                    </h2>
-
-                    {/* Article Description */}
-                    <p className="card-text text-muted mb-4 lh-base">
-                      {currentArticle.description}
-                    </p>
-
-                    {/* Read More Button */}
-                    <a
-                      href={currentArticle.link}
+                <a href={currentArticle.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-success btn-lg d-inline-flex align-items-center"
-                    >
-                      <span className="me-2">Read on Medium</span>
-                      <ExternalLink size={18} />
-                    </a>
+                      style={{textDecoration:"none"}}
+                >
+                  <div className="card shadow-lg border-0">
+                    {/* Article Image */}
+                    {currentArticle.imageUrl && (
+                      <div className="position-relative" style={{height: '250px', overflow: 'hidden'}}>
+                        <img
+                          src={currentArticle.imageUrl}
+                          className="card-img-top w-100 h-100"
+                          alt={currentArticle.title}
+                          style={{objectFit: 'cover'}}
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                          }}
+                        />
+                        <div 
+                          className="position-absolute bottom-0 start-0 w-100" 
+                          style={{
+                            background: 'linear-gradient(transparent, rgba(0,0,0,0.6))',
+                            height: '100px'
+                          }}
+                        ></div>
+                      </div>
+                    )}
+                    
+                    {/* Article Content */}
+                    <div className="card-body p-4">
+                      {/* Article Meta */}
+                      <div className="d-flex flex-wrap align-items-center text-muted small mb-3">
+                        <div className="d-flex align-items-center me-3 mb-1">
+                          <User size={16} className="me-1" />
+                          <span>{currentArticle.creator}</span>
+                        </div>
+                        <div className="d-flex align-items-center me-3 mb-1">
+                          <Calendar size={16} className="me-1" />
+                          <span>{formatDate(currentArticle.pubDate)}</span>
+                        </div>
+                        <div className="d-flex align-items-center mb-1">
+                          <Clock size={16} className="me-1" />
+                          <span>{currentArticle.readingTime} min read</span>
+                        </div>
+                      </div>
+
+                      {/* Article Title */}
+                      <h2 className="card-title h3 fw-bold text-dark mb-3">
+                        {currentArticle.title}
+                      </h2>
+
+                      {/* Article Description */}
+                      <p className="card-text text-muted mb-4 lh-base">
+                        {currentArticle.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
 
