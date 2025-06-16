@@ -23,6 +23,5 @@ jobs:
       with:
         target_branch: gh-pages
         build_dir: out
-        fqdn: bradley-mader.com
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
