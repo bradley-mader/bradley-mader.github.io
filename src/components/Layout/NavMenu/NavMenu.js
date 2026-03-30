@@ -43,6 +43,11 @@ export const NavMenu = () => {
               </NavLink>
             </NavItem>
             <NavItem className="text-gradient-bright-to-light-hover">
+              <NavLink tag={Link} to="/blog">
+                <NavSelector>Blog</NavSelector>
+              </NavLink>
+            </NavItem>
+            <NavItem className="text-gradient-bright-to-light-hover">
               <NavLink tag={Link} to="/resume">
                 <NavSelector>Resume</NavSelector>
               </NavLink>

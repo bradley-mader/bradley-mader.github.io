@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import BlogBanner from '../Blog/BlogBanner';
 import { homeDescription } from '../../data/aboutMe';
 
 const Banner = styled.div`
@@ -104,6 +103,5 @@ export const Home = () => (
     <PsychSkillsImg className='text-primary m-font center-justified full-width small-pad-top'>
       <img src="./Psych_Skills.png" className="full-width diminishing-x-padding" alt="GO | Kubernetes | PostgreSQL | AWS | Azure"/>
     </PsychSkillsImg>
-    <BlogBanner/>
   </Banner>
 );
