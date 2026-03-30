@@ -97,7 +97,9 @@ export const Home = () => (
       <InterludeText className='text-gradient-light-to-bright left-justified m-font'>My name is</InterludeText>
       <FirstNameText className='text-gradient-accent-to-bright xxl-font left-justified script-font'>Bradley</FirstNameText>
       <LastNameText className='text-gradient-accent-to-bright xxl-font left-justified script-font'>Mader<span className='text-primary left-justified sans-serif-font xxl-font'>.</span></LastNameText>
-      <DescriptionText className='text-gradient-light-to-bright m-font left-justified'>{homeDescription}</DescriptionText>
+      {homeDescription.map((paragraph, index) => (
+        <DescriptionText key={index} className='text-gradient-light-to-bright m-font left-justified' style={{ paddingTop: index > 0 ? '1em' : '0' }}>{paragraph}</DescriptionText>
+      ))}
     </ProfileContainer>
     <PsychSkillsImg className='text-primary m-font center-justified full-width small-pad-top'>
       <img src="./Psych_Skills.png" className="full-width diminishing-x-padding" alt="GO | Kubernetes | PostgreSQL | AWS | Azure"/>
