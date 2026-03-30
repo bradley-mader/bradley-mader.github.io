@@ -10,11 +10,8 @@ const Banner = styled.div`
 const ProfileContainer = styled.div`
 position:relative;
     left: 35%;
-    width:30%;
-    @media (max-width: 1400px){
-        left: 25%;
-        width: 50%;
-    }
+    width: 30%;
+    padding-bottom: 1.5em;
     @media (max-width: 992px){
         left:15%;
         width: 70%;
@@ -72,6 +69,20 @@ const LastNameText = styled.h1`
         line-height: 50pt;
     }
 `
+const DescriptionContainer = styled.div`
+    position: relative;
+    left: 20%;
+    width: 60%;
+    @media (max-width: 992px){
+        left:15%;
+        width: 70%;
+    }
+    @media (max-width: 400px){
+        left:15%;
+        width: 70%;
+    }
+`
+
 const DescriptionText = styled.div`
     font-family: Georgia, Garamond;
     font-size:20pt;
@@ -96,10 +107,12 @@ export const Home = () => (
       <InterludeText className='text-gradient-light-to-bright left-justified m-font'>My name is</InterludeText>
       <FirstNameText className='text-gradient-accent-to-bright xxl-font left-justified script-font'>Bradley</FirstNameText>
       <LastNameText className='text-gradient-accent-to-bright xxl-font left-justified script-font'>Mader<span className='text-primary left-justified sans-serif-font xxl-font'>.</span></LastNameText>
+    </ProfileContainer>
+    <DescriptionContainer>
       {homeDescription.map((paragraph, index) => (
         <DescriptionText key={index} className='text-gradient-light-to-bright m-font left-justified' style={{ paddingTop: index > 0 ? '1em' : '0' }}>{paragraph}</DescriptionText>
       ))}
-    </ProfileContainer>
+    </DescriptionContainer>
     <PsychSkillsImg className='text-primary m-font center-justified full-width small-pad-top'>
       <img src="./Psych_Skills.png" className="full-width diminishing-x-padding" alt="GO | Kubernetes | PostgreSQL | AWS | Azure"/>
     </PsychSkillsImg>
