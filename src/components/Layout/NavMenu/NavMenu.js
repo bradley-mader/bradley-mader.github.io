@@ -13,6 +13,7 @@ const Header = styled.div`
 
 const NavSelector = styled.div`
     border-radius:40pt;
+    padding: 0 0.75em;
 `;
 
 export const NavMenu = () => {
