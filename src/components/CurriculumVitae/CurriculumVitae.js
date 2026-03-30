@@ -1,30 +1,7 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React from 'react';
+import { PdfViewer } from '../shared/PdfViewer';
+import { PDF_PATHS } from '../../constants';
 
-const PrintContainer = styled.iframe`
-  position:relative;
-  left:50%;
-  width:8.5in;
-  height:11.3in;
-  backdround:transparent;
-  transform:translate(-50%, 0%);
-  overflow:none;
-  border-radius: 1em;
-  @media print{
-    display: block;
-    position:fixed;
-    width:100%;
-    margin:none;
-    border-radius:none;
-  }
-`
-
-export class CurriculumVitae extends Component {
-    static displayName = CurriculumVitae.name;
-  
-    render(){
-        return <div>
-            <PrintContainer src='https://bradley-mader.github.io/CV.pdf'/>
-        </div>
-    }
-}
+export const CurriculumVitae = () => (
+  <PdfViewer src={PDF_PATHS.cv} height="11.3in" />
+);

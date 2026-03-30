@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Clock, Calendar, User, RefreshCw } from 'lucide-react';
+import { fetchMediumArticles } from '../../services/mediumService';
 
 const BlogBanner = () => {
   const [articles, setArticles] = useState([]);
@@ -8,67 +9,13 @@ const BlogBanner = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetchMediumArticles();
+    loadArticles();
   }, []);
 
-  // Keyboard navigation effect
-  useEffect(() => {
-    const handleKeyPress = (event) => {
-      // This would need to be implemented with proper state management
-      // in the actual component context
-    };
-
-    document.addEventListener('keydown', handleKeyPress);
-    return () => document.removeEventListener('keydown', handleKeyPress);
-  }, []);
-
-  const fetchMediumArticles = async () => {
+  const loadArticles = async () => {
     try {
       setLoading(true);
-      // Using allorigins.me as CORS proxy for Medium RSS feed
-      const proxyUrl = 'https://api.allorigins.win/get?url=';
-      const mediumRssUrl = 'https://medium.com/feed/@mader.bradley';
-      const response = await fetch(proxyUrl + encodeURIComponent(mediumRssUrl));
-      
-      if (!response.ok) {
-        throw new Error('Failed to fetch articles');
-      }
-      
-      const data = await response.json();
-      const parser = new DOMParser();
-      const xmlDoc = parser.parseFromString(data.contents, 'text/xml');
-      console.log(xmlDoc)
-
-      const items = xmlDoc.querySelectorAll('item');
-      const parsedArticles = Array.from(items).map((item, index) => {
-        const title = item.querySelector('title')?.textContent || 'Untitled';
-        const link = item.querySelector('link')?.textContent || '';
-        const pubDate = item.querySelector('pubDate')?.textContent || '';
-        const creator = item.querySelector('creator')?.textContent || 'Mader.bradley';
-        const content = item.querySelector('encoded')?.textContent;
-        
-        // Extract plain text from HTML description
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = content;
-        const plainText = tempDiv.textContent || tempDiv.innerText || '';
-
-        // Extract image from description if available
-        const imgMatch = content.match(/<img[^>]+src=["']([^"']+)["']/);
-        const imageUrl = imgMatch ? imgMatch[1] : null;
-        
-        var result = {
-          id: index,
-          title: title.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>'),
-          link,
-          pubDate: new Date(pubDate),
-          description: plainText.substring(0, 250) + '...',
-          creator,
-          imageUrl,
-          readingTime: Math.ceil(plainText.length / (265 * 6)) // Rough estimate
-        }
-        return result;
-      });
-      
+      const parsedArticles = await fetchMediumArticles();
       setArticles(parsedArticles);
       setError(null);
     } catch (err) {
@@ -140,7 +87,7 @@ const BlogBanner = () => {
               </h4>
               <p className="mb-3">{error}</p>
               <button
-                onClick={fetchMediumArticles}
+                onClick={loadArticles}
                 className="btn btn-outline-danger"
                 disabled={loading}
               >
@@ -229,7 +176,7 @@ const BlogBanner = () => {
                       </div>
 
                       {/* Article Title */}
-                      <h2 className="card-title h3 fw-bold text-dark mb-3">
+                      <h2 className="card-title h3 fw-bold text-brand-primary mb-3">
                         {currentArticle.title}
                       </h2>
 
@@ -260,7 +207,7 @@ const BlogBanner = () => {
                     marginLeft: '-25px'
                   }}
                 >
-                  <ChevronLeft size={24} className="text-dark" />
+                  <ChevronLeft size={24} className="text-brand-primary" />
                   <span className="visually-hidden">Previous</span>
                 </button>
 
@@ -278,7 +225,7 @@ const BlogBanner = () => {
                     marginRight: '-25px'
                   }}
                 >
-                  <ChevronRight size={24} className="text-dark" />
+                  <ChevronRight size={24} className="text-brand-primary" />
                   <span className="visually-hidden">Next</span>
                 </button>
               </>

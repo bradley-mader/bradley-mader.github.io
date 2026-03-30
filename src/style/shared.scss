@@ -7,7 +7,6 @@ body {
   
   @media (max-width: 900px){
     body{
-      -ms-overflow-style: none; /* for Internet Explorer, Edge */
       scrollbar-width: none; /* for Firefox */
     }
     body::-webkit-scrollbar {

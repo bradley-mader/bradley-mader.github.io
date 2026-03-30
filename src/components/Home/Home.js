@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import BlogBanner from '../Blog/BlogBanner';
+import { homeDescription } from '../../data/aboutMe';
 
 const Banner = styled.div`
     position: relative;
@@ -89,34 +90,18 @@ const PsychSkillsImg = styled.div`
     }
 `
 
-export class Home extends Component {
-    static displayName = Home.name;
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            priorScrollTop: null,
-            initializedContent: <div/>
-        }
-    }
-
-
-    render() {
-        return (
-            <Banner className='banner-top-offset'>
-                <ProfileContainer> 
-                    <HiText className='text-gradient-accent-to-bright left-justified xxl-font'>Hi!</HiText>
-                    <InterludeText className='text-gradient-light-to-bright left-justified m-font'>My name is</InterludeText>
-                    <FirstNameText className='text-gradient-accent-to-bright xxl-font left-justified script-font'>Bradley</FirstNameText>
-                    <LastNameText className='text-gradient-accent-to-bright xxl-font left-justified script-font'>Mader<span className='text-primary left-justified sans-serif-font xxl-font'>.</span></LastNameText>
-                    <DescriptionText className='text-gradient-light-to-bright m-font left-justified'>I am a Backend Software Engineer with nearly 7 years of experience focused primarily on distributed applications.</DescriptionText>
-                </ProfileContainer>
-                <PsychSkillsImg className='text-primary m-font center-justified full-width small-pad-top'>
-                    <img src="./Psych_Skills.png" className="full-width diminishing-x-padding" alt="GO | Kubernetes | PostgresQL | AWS | Azure"/>
-                </PsychSkillsImg>
-                <BlogBanner/>
-            </Banner>
-        );
-    }
-}
+export const Home = () => (
+  <Banner className='banner-top-offset'>
+    <ProfileContainer>
+      <HiText className='text-gradient-accent-to-bright left-justified xxl-font'>Hi!</HiText>
+      <InterludeText className='text-gradient-light-to-bright left-justified m-font'>My name is</InterludeText>
+      <FirstNameText className='text-gradient-accent-to-bright xxl-font left-justified script-font'>Bradley</FirstNameText>
+      <LastNameText className='text-gradient-accent-to-bright xxl-font left-justified script-font'>Mader<span className='text-primary left-justified sans-serif-font xxl-font'>.</span></LastNameText>
+      <DescriptionText className='text-gradient-light-to-bright m-font left-justified'>{homeDescription}</DescriptionText>
+    </ProfileContainer>
+    <PsychSkillsImg className='text-primary m-font center-justified full-width small-pad-top'>
+      <img src="./Psych_Skills.png" className="full-width diminishing-x-padding" alt="GO | Kubernetes | PostgreSQL | AWS | Azure"/>
+    </PsychSkillsImg>
+    <BlogBanner/>
+  </Banner>
+);

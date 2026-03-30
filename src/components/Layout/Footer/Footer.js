@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import { SOCIAL_URLS } from '../../../constants';
 
-const FooterBox = styled.table`
-    
-    padding:2em;
-    margin-left: 50%;
-    transform:translate(-50%, 0%);
+const FooterNav = styled.nav`
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding: 2em;
 `;
+
 const ContactChannelIcon = styled.img`
-    float:right;
     display:inline-block;
     margin: 5px 0px 5px 0px;
     padding:10px;
@@ -19,19 +20,19 @@ const ContactChannelIcon = styled.img`
     }
 `;
 
-export const Footer = () =>
-{
-  return (<FooterBox>
-            <tr>
-                <td>
-                    <a href="https://twitter.com/BMMader" target="_blank" rel="noreferrer"><ContactChannelIcon src="twitter.svg" className='dark-bg-on-hover'></ContactChannelIcon></a>
-                </td><td>
-                    <a href="https://medium.com/@mader.bradley" target="_blank" rel="noreferrer"><ContactChannelIcon src="medium.png" className='dark-bg-on-hover'></ContactChannelIcon></a>
-                </td><td>
-                    <a href="mailto:mader.bradley@gmail.com" target="_blank" rel="noreferrer"><ContactChannelIcon src="email_logo.png" className='dark-bg-on-hover'></ContactChannelIcon></a>
-                </td><td>
-                    <a href="https://linkedin.com/in/bradley-mader" target="_blank" rel="noreferrer"><ContactChannelIcon src="linkedin.png" className='dark-bg-on-hover'></ContactChannelIcon></a>
-                </td>
-            </tr>
-    </FooterBox>);
-}
+const socialLinks = [
+  { url: SOCIAL_URLS.twitter, icon: 'twitter.svg', alt: 'Twitter' },
+  { url: SOCIAL_URLS.medium, icon: 'medium.png', alt: 'Medium' },
+  { url: SOCIAL_URLS.email, icon: 'email_logo.png', alt: 'Email' },
+  { url: SOCIAL_URLS.linkedin, icon: 'linkedin.png', alt: 'LinkedIn' },
+];
+
+export const Footer = () => (
+  <FooterNav>
+    {socialLinks.map(({ url, icon, alt }) => (
+      <a key={alt} href={url} target="_blank" rel="noreferrer">
+        <ContactChannelIcon src={icon} className='dark-bg-on-hover' alt={alt} />
+      </a>
+    ))}
+  </FooterNav>
+);

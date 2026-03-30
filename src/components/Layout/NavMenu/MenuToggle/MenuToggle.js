@@ -1,17 +1,12 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 import "./MenuToggle.scss"
 
-export default class MenuToggle extends Component {
-    static displayName = MenuToggle.name;
+const MenuToggle = () => (
+  <label>
+    <div></div>
+    <div></div>
+    <div></div>
+  </label>
+);
 
-    render () {
-        return (
-            <label>
-                <div></div>
-                <div></div>
-                <div></div>
-            </label>
-        );
-    }
-}
+export default MenuToggle;
