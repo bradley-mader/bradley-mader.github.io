@@ -89,17 +89,12 @@ export function AmortizationCalculator() {
         additionalPayments={additionalPayments}
         isCollapsed={isFormCollapsed}
         isLoading={isLoading}
+        error={error}
         onLoanDataChange={setLoanData}
         onAdditionalPaymentsChange={setAdditionalPayments}
         onToggleCollapse={() => setIsFormCollapsed(false)}
         onSubmit={handleSubmit}
       />
-
-      {error && (
-        <div className="alert alert-danger mt-3" role="alert">
-          {error}
-        </div>
-      )}
 
       {result && (
         <div style={{ marginTop: '1.5rem' }}>

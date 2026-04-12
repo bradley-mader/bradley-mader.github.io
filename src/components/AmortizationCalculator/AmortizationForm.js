@@ -35,6 +35,16 @@ const EditHint = styled.span`
   color: #2ebbc9;
 `;
 
+const ErrorMessage = styled.div`
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+`;
+
 const CalculateButton = styled.button`
   width: 100%;
   background-image: linear-gradient(90deg, #7e338e, #dc4875, #7e338e);
@@ -66,6 +76,7 @@ export function AmortizationForm({
   additionalPayments,
   isCollapsed,
   isLoading,
+  error,
   onLoanDataChange,
   onAdditionalPaymentsChange,
   onToggleCollapse,
@@ -93,6 +104,8 @@ export function AmortizationForm({
         payments={additionalPayments}
         onChange={onAdditionalPaymentsChange}
       />
+
+      {error && <ErrorMessage role="alert">{error}</ErrorMessage>}
 
       <CalculateButton type="submit" disabled={isLoading}>
         {isLoading ? "Calculating..." : "Calculate Schedule"}
