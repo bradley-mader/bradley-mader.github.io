@@ -6,12 +6,14 @@ import { Resume } from './components/Resume/Resume';
 import { AboutMe } from './components/AboutMe/AboutMe';
 import { CurriculumVitae } from './components/CurriculumVitae/CurriculumVitae';
 import { Blog } from './components/Blog/Blog';
+import { AmortizationCalculator } from './components/AmortizationCalculator/AmortizationCalculator';
 
 const App = () => (
   <Layout>
     <Routes>
       <Route exact path='/' element={<Home />} />
       <Route path='/blog' element={<Blog />} />
+      <Route path='/projects/amortization-calculator' element={<AmortizationCalculator />} />
       <Route path='/resume' element={<Resume />} />
       <Route path='/aboutme' element={<AboutMe />} />
       <Route path='/curriculum-vitae' element={<CurriculumVitae />} />

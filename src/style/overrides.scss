@@ -1,0 +1,39 @@
+
+/////////////////////////////////////////////////////AMORTIZATION
+.amortization-table thead {
+    background-color: theme-color("darkest");
+    color: theme-color("accent");
+    th {
+        background-color: theme-color("darkest");
+        color: theme-color("accent");
+        border-bottom: 2px solid theme-color("bright");
+    }
+}
+.amortization-table.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(126, 51, 142, 0.05);
+}
+.amortization-table.table-hover > tbody > tr:hover > * {
+    background-color: rgba(46, 187, 201, 0.1);
+}
+
+.form-control {
+    background-color: #FFFFFF;
+    color: #212529;
+    &:focus {
+        background-color: #FFFFFF;
+        border-color: theme-color("primary");
+        box-shadow: 0 0 0 0.2rem rgba(46, 187, 201, 0.25);
+    }
+}
+.form-check-input {
+    background-color: #FFFFFF;
+    border-color: #ced4da;
+    &:checked {
+        background-color: theme-color("primary");
+        border-color: theme-color("primary");
+    }
+    &:focus {
+        border-color: theme-color("primary");
+        box-shadow: 0 0 0 0.2rem rgba(46, 187, 201, 0.25);
+    }
+}
