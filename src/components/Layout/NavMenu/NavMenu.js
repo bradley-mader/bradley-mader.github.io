@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -41,6 +41,17 @@ const ProjectsDropdownMenu = styled.div`
     padding: 0.5rem 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+
+    @media (max-width: 575.98px) {
+        position: static;
+        min-width: 0;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0.25rem 0 0.25rem 1rem;
+    }
 `;
 
 const ProjectsDropdownItem = styled(Link)`
@@ -60,8 +71,27 @@ const ProjectsDropdownItem = styled(Link)`
 export const NavMenu = () => {
   const [collapsed, setCollapsed] = useState(true);
   const [projectsOpen, setProjectsOpen] = useState(false);
+  const projectsRef = useRef(null);
 
   const toggleNavbar = () => setCollapsed(prev => !prev);
+
+  useEffect(() => {
+    if (!projectsOpen) return;
+    const onMouseDown = (e) => {
+      if (projectsRef.current && !projectsRef.current.contains(e.target)) {
+        setProjectsOpen(false);
+      }
+    };
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setProjectsOpen(false);
+    };
+    document.addEventListener('mousedown', onMouseDown);
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', onMouseDown);
+      document.removeEventListener('keydown', onKeyDown);
+    };
+  }, [projectsOpen]);
 
   return (
     <Header>
@@ -87,15 +117,26 @@ export const NavMenu = () => {
             <NavItem
               className="text-gradient-bright-to-light-hover"
               style={{position: 'relative'}}
-              onMouseEnter={() => setProjectsOpen(true)}
-              onMouseLeave={() => setProjectsOpen(false)}
-              onClick={() => setProjectsOpen(prev => !prev)}
+              ref={projectsRef}
             >
-              <NavLink tag={Link} to="#" onClick={(e) => e.preventDefault()}>
+              <NavLink
+                tag={Link}
+                to="#"
+                aria-haspopup="menu"
+                aria-expanded={projectsOpen}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setProjectsOpen(prev => !prev);
+                }}
+              >
                 <ProjectsLabel>Projects</ProjectsLabel>
               </NavLink>
-              <ProjectsDropdownMenu $isOpen={projectsOpen}>
-                <ProjectsDropdownItem to="/projects/amortization-calculator" onClick={() => setProjectsOpen(false)}>
+              <ProjectsDropdownMenu $isOpen={projectsOpen} role="menu">
+                <ProjectsDropdownItem
+                  to="/projects/amortization-calculator"
+                  role="menuitem"
+                  onClick={() => setProjectsOpen(false)}
+                >
                   Amortization Calculator
                 </ProjectsDropdownItem>
               </ProjectsDropdownMenu>
