@@ -26,6 +26,20 @@ const PageTitle = styled.h1`
   margin-bottom: 1.5rem;
 `;
 
+const InfoLink = styled.a`
+  font-size: 28pt;
+  vertical-align: super;
+  margin-left: 0.4rem;
+  text-decoration: none;
+  color: #7e338e;
+  -webkit-text-fill-color: #7e338e;
+  font-weight: bold;
+  &:hover {
+    color: #f8b640;
+    -webkit-text-fill-color: #f8b640;
+  }
+`;
+
 const initialLoanData = {
   principal: "",
   interest: "",
@@ -82,7 +96,18 @@ export function AmortizationCalculator() {
 
   return (
     <CalculatorContainer className="banner-top-offset">
-      <PageTitle>Amortization Calculator</PageTitle>
+      <PageTitle>
+        Amortization Calculator
+        <InfoLink
+          href="https://docs.google.com/document/d/16cFpMZ2DwxddJy05Md5y2zyvRj5X1NL-pPHAdZNVg7w/edit?tab=t.0"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="More information about the Amortization Calculator"
+          title="More information"
+        >
+          &#9432;
+        </InfoLink>
+      </PageTitle>
 
       <AmortizationForm
         loanData={loanData}

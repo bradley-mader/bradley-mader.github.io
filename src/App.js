@@ -7,6 +7,7 @@ import { AboutMe } from './components/AboutMe/AboutMe';
 import { CurriculumVitae } from './components/CurriculumVitae/CurriculumVitae';
 import { Blog } from './components/Blog/Blog';
 import { AmortizationCalculator } from './components/AmortizationCalculator/AmortizationCalculator';
+import { Aalts } from './components/Aalts/Aalts';
 
 const App = () => (
   <Layout>
@@ -14,6 +15,7 @@ const App = () => (
       <Route exact path='/' element={<Home />} />
       <Route path='/blog' element={<Blog />} />
       <Route path='/projects/amortization-calculator' element={<AmortizationCalculator />} />
+      <Route path='/projects/aalts' element={<Aalts />} />
       <Route path='/resume' element={<Resume />} />
       <Route path='/aboutme' element={<AboutMe />} />
       <Route path='/curriculum-vitae' element={<CurriculumVitae />} />

@@ -34,7 +34,7 @@ const ProjectsDropdownMenu = styled.div`
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 220px;
+    min-width: 280px;
     background-color: #251248;
     border: 1px solid #7e338e;
     border-radius: 10px;
@@ -138,6 +138,13 @@ export const NavMenu = () => {
                   onClick={() => setProjectsOpen(false)}
                 >
                   Amortization Calculator
+                </ProjectsDropdownItem>
+                <ProjectsDropdownItem
+                  to="/projects/aalts"
+                  role="menuitem"
+                  onClick={() => setProjectsOpen(false)}
+                >
+                  Agent Audit Log Tracking Service
                 </ProjectsDropdownItem>
               </ProjectsDropdownMenu>
             </NavItem>
