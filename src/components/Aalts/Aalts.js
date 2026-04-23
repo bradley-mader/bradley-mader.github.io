@@ -46,7 +46,7 @@ export function Aalts() {
       <PageTitle>
         Agent Audit Log Tracking Service
         <InfoLink
-          href="https://docs.google.com/document/d/1J1hXIUt70d8OiMzbCYwsxOWrJ8_YdVERSjZIZwsXNKo/edit?tab=t.0#heading=h.7v50qwo1bs0v"
+          href="https://docs.google.com/document/d/1J1hXIUt70d8OiMzbCYwsxOWrJ8_YdVERSjZIZwsXNKo/edit?tab=t.yzhpa2fpry09#heading=h.cjsqg9oum4lh"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="More information about aalts"
