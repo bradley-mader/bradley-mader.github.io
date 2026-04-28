@@ -4,7 +4,7 @@ export const bioIntro = {
   hobbiesIntro: "When I'm not doing that, my hobbies include: ",
 };
 
-export const professionalSynopsis = `I have spent the past 6 years developing applications both web based and native. In that time, I have advanced initiatives to move to cloud native architectures, automated testing, decommissioned legacy software systems, and improved UX of applications and workflows. Before that I spent 3 years working in data analytics including development of ETL pipelines, governing code quality and forecasting based on historical data.`;
+export const professionalSynopsis = `I have spent the past 8 years developing distributed web applications. In that time, I have advanced initiatives to move to cloud native architectures, automated testing, decommissioned legacy software systems, and improved UX of applications and workflows. Before that I spent 3 years working in data analytics including development of ETL pipelines, governing code quality and forecasting based on historical data.`;
 
 export const professionalPassion = `I am most passionate about working on projects that allow for collaborative real-time experiences. My favorite backend programming language is Go due to the simple and intuitive syntax, features specifically designed to support multithreading, ongoing reliable maintenance and updates to the language, and relatively high performance benchmarks, but I have also extensively used C# and C++ in the backend.`;
 
